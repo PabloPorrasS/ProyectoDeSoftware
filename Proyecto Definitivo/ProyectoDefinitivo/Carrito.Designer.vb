@@ -34,6 +34,7 @@ Partial Class Carrito
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.ButtonOrders = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -165,12 +166,22 @@ Partial Class Carrito
         Me.ButtonOrders.Text = "Pedidos"
         Me.ButtonOrders.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(496, 168)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 32
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Carrito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1016, 583)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ButtonOrders)
         Me.Controls.Add(Me.ButtonShoppingCart)
         Me.Controls.Add(Me.ButtonTrends)
@@ -204,4 +215,5 @@ Partial Class Carrito
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents ButtonOrders As Button
+    Friend WithEvents Button1 As Button
 End Class
