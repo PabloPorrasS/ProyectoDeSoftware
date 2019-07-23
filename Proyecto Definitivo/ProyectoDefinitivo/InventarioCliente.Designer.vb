@@ -45,6 +45,7 @@ Partial Class InventarioCliente
         Me.InventoryDataSet5 = New ProyectoDefinitivo.InventoryDataSet5()
         Me.ClientProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientProductsTableAdapter = New ProyectoDefinitivo.InventoryDataSet5TableAdapters.ClientProductsTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -68,6 +69,7 @@ Partial Class InventarioCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Id_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
@@ -260,6 +262,15 @@ Partial Class InventarioCliente
         '
         Me.ClientProductsTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(285, 30)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Label1"
+        '
         'InventarioCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -310,4 +321,5 @@ Partial Class InventarioCliente
     Friend WithEvents ClientProductsBindingSource As BindingSource
     Friend WithEvents ClientProductsTableAdapter As InventoryDataSet5TableAdapters.ClientProductsTableAdapter
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
 End Class
