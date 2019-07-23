@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{077BCDB9-CEB3-4431-99E5-39BE191DC99B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProyectoDefinitivo.My.MyApplication</StartupObject>
+    <RootNamespace>ProyectoDefinitivo</RootNamespace>
+    <AssemblyName>ProyectoDefinitivo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProyectoDefinitivo.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProyectoDefinitivo.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarProductoBodega.Designer.vb">
+      <DependentUpon>AgregarProductoBodega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProductoBodega.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carrito.Designer.vb">
+      <DependentUpon>Carrito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCarrito.Designer.vb">
+      <DependentUpon>EditarCarrito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCarrito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPerfil.Designer.vb">
+      <DependentUpon>EditarPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioEditarProductoBodega.Designer.vb">
+      <DependentUpon>FormularioEditarProductoBodega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioEditarProductoBodega.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeAM.Designer.vb">
+      <DependentUpon>HomeAM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeCliente.Designer.vb">
+      <DependentUpon>HomeCliente.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioAM.Designer.vb">
+      <DependentUpon>InventarioAM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioAM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioDeRegistro.Designer.vb">
+      <DependentUpon>FormularioDeRegistro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioDeRegistro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventarioCliente.Designer.vb">
+      <DependentUpon>InventarioCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NuevoProductoCliente.Designer.vb">
+      <DependentUpon>NuevoProductoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoProductoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedidosCliente.Designer.vb">
+      <DependentUpon>PedidosCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgregarProductoBodega.resx">
+      <DependentUpon>AgregarProductoBodega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carrito.resx">
+      <DependentUpon>Carrito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCarrito.resx">
+      <DependentUpon>EditarCarrito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPerfil.resx">
+      <DependentUpon>EditarPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioEditarProductoBodega.resx">
+      <DependentUpon>FormularioEditarProductoBodega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeAM.resx">
+      <DependentUpon>HomeAM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeCliente.resx">
+      <DependentUpon>HomeCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioAM.resx">
+      <DependentUpon>InventarioAM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioDeRegistro.resx">
+      <DependentUpon>FormularioDeRegistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventarioCliente.resx">
+      <DependentUpon>InventarioCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoProductoCliente.resx">
+      <DependentUpon>NuevoProductoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidosCliente.resx">
+      <DependentUpon>PedidosCliente.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InventoryDataSet.xsc">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet.xss">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet1.xsc">
+      <DependentUpon>InventoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet1.xss">
+      <DependentUpon>InventoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet2.xsc">
+      <DependentUpon>InventoryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet2.xss">
+      <DependentUpon>InventoryDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet3.xsc">
+      <DependentUpon>InventoryDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet3.xss">
+      <DependentUpon>InventoryDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet4.xsc">
+      <DependentUpon>InventoryDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet4.xss">
+      <DependentUpon>InventoryDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet5.xsc">
+      <DependentUpon>InventoryDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet5.xss">
+      <DependentUpon>InventoryDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
