@@ -68,6 +68,7 @@ Partial Class NuevoProductoCliente
         '
         Me.ButtonSaveClient.BackColor = System.Drawing.Color.LightGreen
         Me.ButtonSaveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonSaveClient.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSaveClient.Location = New System.Drawing.Point(114, 218)
         Me.ButtonSaveClient.Name = "ButtonSaveClient"
         Me.ButtonSaveClient.Size = New System.Drawing.Size(168, 48)

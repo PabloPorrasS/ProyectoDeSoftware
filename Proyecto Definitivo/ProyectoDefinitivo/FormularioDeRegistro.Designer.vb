@@ -117,6 +117,7 @@ Partial Class FormularioDeRegistro
         '
         Me.ButtonSaveRegister.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ButtonSaveRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonSaveRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSaveRegister.Location = New System.Drawing.Point(101, 368)
         Me.ButtonSaveRegister.Name = "ButtonSaveRegister"
         Me.ButtonSaveRegister.Size = New System.Drawing.Size(166, 41)

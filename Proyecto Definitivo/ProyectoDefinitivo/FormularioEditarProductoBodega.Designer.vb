@@ -44,6 +44,7 @@ Partial Class FormularioEditar
         Me.ButtonSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ButtonSave.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSave.ForeColor = System.Drawing.Color.Black
         Me.ButtonSave.Location = New System.Drawing.Point(97, 381)
         Me.ButtonSave.Name = "ButtonSave"

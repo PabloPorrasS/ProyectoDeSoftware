@@ -35,6 +35,7 @@ Partial Class Login
         '
         Me.ButtonLogin.BackColor = System.Drawing.Color.LightGreen
         Me.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonLogin.Location = New System.Drawing.Point(90, 237)
         Me.ButtonLogin.Name = "ButtonLogin"
         Me.ButtonLogin.Size = New System.Drawing.Size(99, 30)
@@ -91,6 +92,7 @@ Partial Class Login
         '
         Me.ButtonRegister.BackColor = System.Drawing.Color.YellowGreen
         Me.ButtonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonRegister.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonRegister.Location = New System.Drawing.Point(224, 237)
         Me.ButtonRegister.Name = "ButtonRegister"
         Me.ButtonRegister.Size = New System.Drawing.Size(99, 30)
