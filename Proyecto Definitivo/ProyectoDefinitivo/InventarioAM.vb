@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class InventarioAM
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=  SP-LA-LAB9-14;Initial Catalog=Inventory;Integrated Security=True"
 
     Public rowOfGridView As Integer
 
@@ -12,13 +12,13 @@ Public Class InventarioAM
         'TODO: esta línea de código carga datos en la tabla 'InventoryDataSet2.Products' Puede moverla o quitarla según sea necesario.
         'Me.ProductsTableAdapter.Fill(Me.InventoryDataSet2.Products)
 
-        LoadGridView()
+        LoadGridView2()
 
 
 
     End Sub
 
-    Sub LoadGridView()
+    Sub LoadGridView2()
 
 
         Dim Id As Integer
@@ -49,6 +49,52 @@ Public Class InventarioAM
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
 
         FormularioEditar.Show()
+
+    End Sub
+
+    Sub LoadGridView()
+
+        Dim Id_Profile As Integer
+
+
+        Dim Connection As New SqlConnection(ConnectionString)
+
+
+        Dim commandselect As SqlCommand
+
+
+        Dim SelectQuery As String
+        SelectQuery = "Select Id FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Connection.Open()
+
+        Dim reader As SqlDataReader
+        reader = commandselect.ExecuteReader()
+
+        If reader.HasRows Then
+            reader.Read()
+            Id_Profile = reader.GetInt32(0)
+
+        End If
+
+        PedidosCliente.Id_Profile.Text = Id_Profile
+
+        Connection.Close()
+
+
+
+
+        Dim ProductsTable As New DataTable
+
+        SelectQuery = "SELECT Id 'Id', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantity 'Cantidad', Price 'Precio' FROM Products"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Dim dataAdapter As New SqlDataAdapter(commandselect)
+        dataAdapter.Fill(ProductsTable)
+        DataGridView2.DataSource = ProductsTable
+
+        DataGridView2.Columns(0).Visible = False
+
+
 
     End Sub
 

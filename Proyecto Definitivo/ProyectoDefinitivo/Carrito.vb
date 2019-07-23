@@ -54,7 +54,7 @@ Public Class Carrito
 
         Dim ProductsTable As New DataTable
 
-        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantity 'Cantidad', Price 'Precio' FROM ShoppingCart"
+        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantity 'Cantidad', Price 'Precio unitario' FROM ShoppingCart"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(ProductsTable)

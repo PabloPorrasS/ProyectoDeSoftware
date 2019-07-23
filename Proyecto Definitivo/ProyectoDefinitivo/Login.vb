@@ -60,14 +60,13 @@ Public Class Login
         Connection.Close()
 
 
-
-
-
-
-
     End Sub
 
     Private Sub ButtonRegister_Click(sender As Object, e As EventArgs) Handles ButtonRegister.Click
         FormularioDeRegistro.Show()
     End Sub
+
+
 End Class
+
+
