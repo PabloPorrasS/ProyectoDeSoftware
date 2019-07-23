@@ -25,7 +25,6 @@ Partial Class InventarioCliente
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InventarioCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Id_Profile = New System.Windows.Forms.Label()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
@@ -68,7 +67,6 @@ Partial Class InventarioCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Id_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
@@ -86,15 +84,6 @@ Partial Class InventarioCliente
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(285, 30)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Label1"
         '
         'Id_Profile
         '
@@ -307,5 +296,4 @@ Partial Class InventarioCliente
     Friend WithEvents InventoryDataSet5 As InventoryDataSet5
     Friend WithEvents ClientProductsBindingSource As BindingSource
     Friend WithEvents ClientProductsTableAdapter As InventoryDataSet5TableAdapters.ClientProductsTableAdapter
-    Friend WithEvents Label1 As Label
 End Class
