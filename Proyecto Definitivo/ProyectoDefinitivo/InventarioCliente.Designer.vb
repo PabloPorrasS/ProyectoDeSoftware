@@ -93,7 +93,6 @@ Partial Class InventarioCliente
         Me.Id_Profile.Size = New System.Drawing.Size(39, 13)
         Me.Id_Profile.TabIndex = 6
         Me.Id_Profile.Text = "Label1"
-        Me.Id_Profile.Visible = False
         '
         'ButtonOrders
         '

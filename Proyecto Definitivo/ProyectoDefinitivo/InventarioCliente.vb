@@ -79,7 +79,7 @@ Public Class InventarioCliente
         Connection.Close()
         Me.Close()
 
-        DataGridView1.DataSource = Nothing
+        'DataGridView1.DataSource = Nothing
         LoadGridView()
 
 

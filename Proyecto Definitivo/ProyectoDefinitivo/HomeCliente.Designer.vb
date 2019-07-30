@@ -32,6 +32,7 @@ Partial Class HomeCliente
         Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
+        Me.LabelId_Profile = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -46,6 +47,7 @@ Partial Class HomeCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.LabelId_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonEditProfile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
         Me.SplitContainer1.Panel1.Controls.Add(Me.LabelTypeOfUser)
@@ -156,6 +158,16 @@ Partial Class HomeCliente
         Me.ButtonMyInventory.Text = "Mi inventario"
         Me.ButtonMyInventory.UseVisualStyleBackColor = True
         '
+        'LabelId_Profile
+        '
+        Me.LabelId_Profile.AutoSize = True
+        Me.LabelId_Profile.Location = New System.Drawing.Point(58, 13)
+        Me.LabelId_Profile.Name = "LabelId_Profile"
+        Me.LabelId_Profile.Size = New System.Drawing.Size(39, 13)
+        Me.LabelId_Profile.TabIndex = 8
+        Me.LabelId_Profile.Text = "Label1"
+        Me.LabelId_Profile.Visible = False
+        '
         'HomeCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -185,4 +197,5 @@ Partial Class HomeCliente
     Friend WithEvents ButtonMyInventory As Button
     Friend WithEvents ButtonOrders As Button
     Friend WithEvents ButtonEditProfile As Button
+    Friend WithEvents LabelId_Profile As Label
 End Class

@@ -24,8 +24,6 @@ Partial Class NuevoProductoCliente
     Private Sub InitializeComponent()
         Me.LabelQuantityNew = New System.Windows.Forms.Label()
         Me.NumericUpDownQuantityClient = New System.Windows.Forms.NumericUpDown()
-        Me.LabelPriceNew = New System.Windows.Forms.Label()
-        Me.TextBoxPriceNew = New System.Windows.Forms.TextBox()
         Me.ButtonSaveClient = New System.Windows.Forms.Button()
         CType(Me.NumericUpDownQuantityClient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -34,7 +32,7 @@ Partial Class NuevoProductoCliente
         '
         Me.LabelQuantityNew.AutoSize = True
         Me.LabelQuantityNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LabelQuantityNew.Location = New System.Drawing.Point(52, 59)
+        Me.LabelQuantityNew.Location = New System.Drawing.Point(60, 107)
         Me.LabelQuantityNew.Name = "LabelQuantityNew"
         Me.LabelQuantityNew.Size = New System.Drawing.Size(73, 20)
         Me.LabelQuantityNew.TabIndex = 2
@@ -42,27 +40,10 @@ Partial Class NuevoProductoCliente
         '
         'NumericUpDownQuantityClient
         '
-        Me.NumericUpDownQuantityClient.Location = New System.Drawing.Point(224, 59)
+        Me.NumericUpDownQuantityClient.Location = New System.Drawing.Point(232, 107)
         Me.NumericUpDownQuantityClient.Name = "NumericUpDownQuantityClient"
         Me.NumericUpDownQuantityClient.Size = New System.Drawing.Size(126, 20)
         Me.NumericUpDownQuantityClient.TabIndex = 3
-        '
-        'LabelPriceNew
-        '
-        Me.LabelPriceNew.AutoSize = True
-        Me.LabelPriceNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LabelPriceNew.Location = New System.Drawing.Point(62, 136)
-        Me.LabelPriceNew.Name = "LabelPriceNew"
-        Me.LabelPriceNew.Size = New System.Drawing.Size(53, 20)
-        Me.LabelPriceNew.TabIndex = 4
-        Me.LabelPriceNew.Text = "Precio"
-        '
-        'TextBoxPriceNew
-        '
-        Me.TextBoxPriceNew.Location = New System.Drawing.Point(224, 136)
-        Me.TextBoxPriceNew.Name = "TextBoxPriceNew"
-        Me.TextBoxPriceNew.Size = New System.Drawing.Size(127, 20)
-        Me.TextBoxPriceNew.TabIndex = 5
         '
         'ButtonSaveClient
         '
@@ -83,8 +64,6 @@ Partial Class NuevoProductoCliente
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(398, 317)
         Me.Controls.Add(Me.ButtonSaveClient)
-        Me.Controls.Add(Me.TextBoxPriceNew)
-        Me.Controls.Add(Me.LabelPriceNew)
         Me.Controls.Add(Me.NumericUpDownQuantityClient)
         Me.Controls.Add(Me.LabelQuantityNew)
         Me.MaximizeBox = False
@@ -100,7 +79,5 @@ Partial Class NuevoProductoCliente
     End Sub
     Friend WithEvents LabelQuantityNew As Label
     Friend WithEvents NumericUpDownQuantityClient As NumericUpDown
-    Friend WithEvents LabelPriceNew As Label
-    Friend WithEvents TextBoxPriceNew As TextBox
     Friend WithEvents ButtonSaveClient As Button
 End Class

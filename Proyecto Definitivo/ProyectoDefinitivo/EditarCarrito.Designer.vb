@@ -23,8 +23,6 @@ Partial Class EditarCarrito
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ButtonSaveClient = New System.Windows.Forms.Button()
-        Me.TextBoxPriceNew = New System.Windows.Forms.TextBox()
-        Me.LabelPriceNew = New System.Windows.Forms.Label()
         Me.NumericUpDownQuantityClient = New System.Windows.Forms.NumericUpDown()
         Me.LabelQuantityNew = New System.Windows.Forms.Label()
         Me.LabelProductName = New System.Windows.Forms.Label()
@@ -42,26 +40,9 @@ Partial Class EditarCarrito
         Me.ButtonSaveClient.Text = "Guardar"
         Me.ButtonSaveClient.UseVisualStyleBackColor = False
         '
-        'TextBoxPriceNew
-        '
-        Me.TextBoxPriceNew.Location = New System.Drawing.Point(225, 141)
-        Me.TextBoxPriceNew.Name = "TextBoxPriceNew"
-        Me.TextBoxPriceNew.Size = New System.Drawing.Size(127, 20)
-        Me.TextBoxPriceNew.TabIndex = 10
-        '
-        'LabelPriceNew
-        '
-        Me.LabelPriceNew.AutoSize = True
-        Me.LabelPriceNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LabelPriceNew.Location = New System.Drawing.Point(79, 139)
-        Me.LabelPriceNew.Name = "LabelPriceNew"
-        Me.LabelPriceNew.Size = New System.Drawing.Size(53, 20)
-        Me.LabelPriceNew.TabIndex = 9
-        Me.LabelPriceNew.Text = "Precio"
-        '
         'NumericUpDownQuantityClient
         '
-        Me.NumericUpDownQuantityClient.Location = New System.Drawing.Point(225, 62)
+        Me.NumericUpDownQuantityClient.Location = New System.Drawing.Point(222, 114)
         Me.NumericUpDownQuantityClient.Name = "NumericUpDownQuantityClient"
         Me.NumericUpDownQuantityClient.Size = New System.Drawing.Size(126, 20)
         Me.NumericUpDownQuantityClient.TabIndex = 8
@@ -70,7 +51,7 @@ Partial Class EditarCarrito
         '
         Me.LabelQuantityNew.AutoSize = True
         Me.LabelQuantityNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LabelQuantityNew.Location = New System.Drawing.Point(79, 62)
+        Me.LabelQuantityNew.Location = New System.Drawing.Point(76, 114)
         Me.LabelQuantityNew.Name = "LabelQuantityNew"
         Me.LabelQuantityNew.Size = New System.Drawing.Size(73, 20)
         Me.LabelQuantityNew.TabIndex = 7
@@ -80,7 +61,7 @@ Partial Class EditarCarrito
         '
         Me.LabelProductName.AutoSize = True
         Me.LabelProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
-        Me.LabelProductName.Location = New System.Drawing.Point(152, 24)
+        Me.LabelProductName.Location = New System.Drawing.Point(149, 76)
         Me.LabelProductName.Name = "LabelProductName"
         Me.LabelProductName.Size = New System.Drawing.Size(0, 25)
         Me.LabelProductName.TabIndex = 12
@@ -93,8 +74,6 @@ Partial Class EditarCarrito
         Me.ClientSize = New System.Drawing.Size(398, 317)
         Me.Controls.Add(Me.LabelProductName)
         Me.Controls.Add(Me.ButtonSaveClient)
-        Me.Controls.Add(Me.TextBoxPriceNew)
-        Me.Controls.Add(Me.LabelPriceNew)
         Me.Controls.Add(Me.NumericUpDownQuantityClient)
         Me.Controls.Add(Me.LabelQuantityNew)
         Me.MaximizeBox = False
@@ -110,8 +89,6 @@ Partial Class EditarCarrito
     End Sub
 
     Friend WithEvents ButtonSaveClient As Button
-    Friend WithEvents TextBoxPriceNew As TextBox
-    Friend WithEvents LabelPriceNew As Label
     Friend WithEvents NumericUpDownQuantityClient As NumericUpDown
     Friend WithEvents LabelQuantityNew As Label
     Friend WithEvents LabelProductName As Label

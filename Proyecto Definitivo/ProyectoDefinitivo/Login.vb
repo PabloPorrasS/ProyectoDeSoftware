@@ -56,8 +56,9 @@ Public Class Login
 
             End If
 
-        End If
 
+        Else MsgBox("Correo o Contraseña incorrectos")
+        End If
 
         Connection.Close()
 
@@ -75,21 +76,21 @@ Public Class Login
                "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$")
     End Function
 
-    Private Sub TextBoxEmail_Leave(sender As Object, e As EventArgs) Handles TextBoxEmail.Leave
+    'Private Sub TextBoxEmail_Leave(sender As Object, e As EventArgs) Handles TextBoxEmail.Leave
 
 
-        If validar_Mail(LCase(TextBoxEmail.Text)) = False Then
-            MessageBox.Show("Dirección de correo electronico no válida, el correo debe tener el formato: nombre@dominio.com, " &
-            " por favor escriba un correo válido", "Validación de correo electronico", MessageBoxButtons.OK,
-            MessageBoxIcon.Exclamation)
-            TextBoxEmail.Focus()
-            TextBoxEmail.SelectAll()
-        End If
+    '    If validar_Mail(LCase(TextBoxEmail.Text)) = False Then
+    '        MessageBox.Show("Dirección de correo electronico no válida, el correo debe tener el formato: nombre@dominio.com, " &
+    '        " por favor escriba un correo válido", "Validación de correo electronico", MessageBoxButtons.OK,
+    '        MessageBoxIcon.Exclamation)
+    '        TextBoxEmail.Focus()
+    '        TextBoxEmail.SelectAll()
+    '    End If
 
 
 
 
-    End Sub
+    'End Sub
 End Class
 
 

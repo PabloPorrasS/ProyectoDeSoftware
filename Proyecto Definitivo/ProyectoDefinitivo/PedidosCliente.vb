@@ -10,7 +10,7 @@ Public Class PedidosCliente
     Dim IdProduct As Integer
 
 
-    Dim rowOfGridview As Integer 'obtendra el numero de fila del gridview
+    Public rowOfGridview As Integer
 
     Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint

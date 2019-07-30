@@ -18,10 +18,33 @@ Public Class HomeCliente
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+        Dim Id As Integer
+
+
         Dim Connection As New SqlConnection(ConnectionString)
+
+
+        Dim commandselect As SqlCommand
+
+
         Dim SelectQuery As String
-        Dim commandSelect As New SqlCommand
-        Dim Reader As SqlDataReader
+        SelectQuery = "Select Id FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Connection.Open()
+
+        Dim reader As SqlDataReader
+        reader = commandselect.ExecuteReader()
+
+        If reader.HasRows Then
+            reader.Read()
+            Id = reader.GetInt32(0)
+
+        End If
+
+        LabelId_Profile.Text = Id
+
+        Connection.Close()
 
 
         SelectQuery = "Select * FROM Profile WHERE Email = '" & Login.TextBoxEmail.Text & "'"
