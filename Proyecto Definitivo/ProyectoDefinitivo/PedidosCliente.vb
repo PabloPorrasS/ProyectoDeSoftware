@@ -12,7 +12,7 @@ Public Class PedidosCliente
 
     Dim rowOfGridview As Integer 'obtendra el numero de fila del gridview
 
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
 
     End Sub
@@ -78,51 +78,6 @@ Public Class PedidosCliente
     Private Sub ButtonAddToCart_Click(sender As Object, e As EventArgs) Handles ButtonAddToCart.Click
 
         NuevoProductoCliente.Show()
-
-
-        'Dim Id As Integer
-        'Id = Id_Profile.Text
-
-
-        'Dim IdProduct As Integer
-
-        'Dim conexion As String
-        'conexion = NuevoProductoCliente.TextBoxPriceNew.Text
-
-
-        'IdProduct = DataGridView1.Item(0, rowOfGridview).Value
-        'Name = DataGridView1.Item(1, rowOfGridview).Value.ToString
-        'Brand = DataGridView1.Item(2, rowOfGridview).Value.ToString
-        'Category = DataGridView1.Item(3, rowOfGridview).Value.ToString
-        'Code = DataGridView1.Item(4, rowOfGridview).Value
-        'Quantity = NuevoProductoCliente.NumericUpDownQuantityClient.Value
-        'Price = Integer.Parse(conexion)
-        'Dim Connection As New SqlConnection(ConnectionString)
-        'Dim Query As String
-
-        'Query = "INSERT INTO ShoppingCart (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
-
-        'Dim Command As SqlCommand
-        'Command = New SqlCommand(Query, Connection)
-
-        'With Command
-
-        '    .Parameters.AddWithValue("@Id_Product", IdProduct)
-        '    .Parameters.AddWithValue("@Id", Id)
-        '    .Parameters.AddWithValue("@Name", Name)
-        '    .Parameters.AddWithValue("@Brand", Brand)
-        '    .Parameters.AddWithValue("@Category", Category)
-        '    .Parameters.AddWithValue("@Code", Code)
-        '    .Parameters.AddWithValue("@Quantity", Quantity)
-        '    .Parameters.AddWithValue("@Price", Price)
-
-        'End With
-
-        'Connection.Open()
-        'Command.ExecuteNonQuery()
-        'Command.Dispose()
-        'Connection.Close()
-
 
 
 

@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class InventarioCliente
-    Dim rowOfGridview As Integer
+    Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
 
 
 
@@ -53,10 +53,7 @@ Public Class InventarioCliente
 
     End Sub
 
-    Private Sub ButtonAddNewProduct_Click(sender As Object, e As EventArgs) Handles ButtonAddEdit.Click
-        NuevoProductoCliente.Show()
 
-    End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
@@ -114,6 +111,13 @@ Public Class InventarioCliente
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
 
+
+
+    End Sub
+
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+
+        EditarProductoTienda.Show()
 
 
     End Sub

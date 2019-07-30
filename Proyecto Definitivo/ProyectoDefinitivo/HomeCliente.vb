@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class HomeCliente
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     'Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
 
     '    If LabelTypeOfUser.Text = 1 Then

@@ -97,6 +97,12 @@
     <Compile Include="EditarPerfil.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EditarProductoTienda.Designer.vb">
+      <DependentUpon>EditarProductoTienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditarProductoTienda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormularioEditarProductoBodega.Designer.vb">
       <DependentUpon>FormularioEditarProductoBodega.vb</DependentUpon>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarPerfil.resx">
       <DependentUpon>EditarPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarProductoTienda.resx">
+      <DependentUpon>EditarProductoTienda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioEditarProductoBodega.resx">
       <DependentUpon>FormularioEditarProductoBodega.vb</DependentUpon>

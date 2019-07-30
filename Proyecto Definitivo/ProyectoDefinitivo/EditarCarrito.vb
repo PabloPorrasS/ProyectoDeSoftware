@@ -32,13 +32,12 @@ Public Class EditarCarrito
         Dim Connection As New SqlConnection(ConnectionString)
         Dim Query As String
 
-        Query = "UPDATE ShoppingCart SET Quantity=@Quantity, Price=@Price WHERE Name = '" & LabelProductName.Text & "'"
+        Query = "UPDATE ShoppingCart SET Price=@Price WHERE Id_Profile = '" & InventarioCliente.Id_Profile.Text & "' And Name = '" & LabelProductName.Text & "'"
 
         Dim Command As SqlCommand
         Command = New SqlCommand(Query, Connection)
 
         With Command
-            .Parameters.AddWithValue("@Quantity", Quantity)
             .Parameters.AddWithValue("@Price", Price)
         End With
 

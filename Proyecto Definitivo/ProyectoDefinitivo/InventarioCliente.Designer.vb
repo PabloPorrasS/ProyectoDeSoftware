@@ -33,7 +33,7 @@ Partial Class InventarioCliente
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
         Me.ButtonDeleteProduct = New System.Windows.Forms.Button()
-        Me.ButtonAddEdit = New System.Windows.Forms.Button()
+        Me.ButtonEdit = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InventoryDataSet1 = New ProyectoDefinitivo.InventoryDataSet1()
@@ -79,7 +79,7 @@ Partial Class InventarioCliente
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.ButtonDeleteProduct)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.ButtonAddEdit)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.ButtonEdit)
         Me.SplitContainer1.Panel2.Controls.Add(Me.DataGridView1)
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
@@ -181,18 +181,18 @@ Partial Class InventarioCliente
         Me.ButtonDeleteProduct.Text = "Eliminar"
         Me.ButtonDeleteProduct.UseVisualStyleBackColor = False
         '
-        'ButtonAddEdit
+        'ButtonEdit
         '
-        Me.ButtonAddEdit.BackColor = System.Drawing.Color.YellowGreen
-        Me.ButtonAddEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.ButtonAddEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.ButtonAddEdit.Location = New System.Drawing.Point(-6, 0)
-        Me.ButtonAddEdit.Name = "ButtonAddEdit"
-        Me.ButtonAddEdit.Size = New System.Drawing.Size(357, 30)
-        Me.ButtonAddEdit.TabIndex = 1
-        Me.ButtonAddEdit.Text = "Editar"
-        Me.ButtonAddEdit.UseVisualStyleBackColor = False
+        Me.ButtonEdit.BackColor = System.Drawing.Color.YellowGreen
+        Me.ButtonEdit.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.ButtonEdit.Location = New System.Drawing.Point(-6, 0)
+        Me.ButtonEdit.Name = "ButtonEdit"
+        Me.ButtonEdit.Size = New System.Drawing.Size(357, 30)
+        Me.ButtonEdit.TabIndex = 1
+        Me.ButtonEdit.Text = "Editar"
+        Me.ButtonEdit.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
@@ -286,7 +286,7 @@ Partial Class InventarioCliente
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents InventoryDataSetBindingSource As BindingSource
     Friend WithEvents InventoryDataSet As InventoryDataSet
-    Friend WithEvents ButtonAddEdit As Button
+    Friend WithEvents ButtonEdit As Button
     Friend WithEvents InventoryDataSet1 As InventoryDataSet1
     Friend WithEvents ProductsBindingSource As BindingSource
     Friend WithEvents ProductsTableAdapter As InventoryDataSet1TableAdapters.ProductsTableAdapter
