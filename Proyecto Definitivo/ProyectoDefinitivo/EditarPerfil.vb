@@ -29,11 +29,6 @@ Public Class EditarPerfil
 
         End With
 
-
-
-
-
-
         Dim Id As Integer
 
 
@@ -61,7 +56,7 @@ Public Class EditarPerfil
             reader.Read()
             LabelIdProfile.Text = reader.GetInt32(0).ToString
             Name = Reader.GetString(1)
-            Email = reader.GetString(4)
+
             Password = reader.GetString(5)
             TypeOfBussiness = reader.GetInt32(6)
             Ubication = reader.GetString(3)
@@ -72,7 +67,7 @@ Public Class EditarPerfil
 
         TextBoxCompleteName.Text = Name
         ComboBoxTypeOfBusiness.SelectedIndex = TypeOfBussiness - 1
-        TextBoxEmail.Text = Email
+
         TextBoxPassword.Text = Password
         TextBoxUbication.Text = Ubication
 
@@ -94,7 +89,7 @@ Public Class EditarPerfil
         'le asignamos valor a las variables
         Name = TextBoxCompleteName.Text
         TypeOfBusiness = Integer.Parse(ComboBoxTypeOfBusiness.SelectedValue.ToString)
-        Email = TextBoxEmail.Text
+
         Password = TextBoxPassword.Text
         Ubication = TextBoxUbication.Text
 
@@ -102,7 +97,7 @@ Public Class EditarPerfil
         Dim Connection As New SqlConnection(ConnectionString)
         Dim Query As String
 
-        Query = "UPDATE Profile SET CompleteName=@Name, IdTypeOfBusiness=@TypeOfBusiness, Email=@Email, Password=@Password, Ubication=@Ubication WHERE Id = '" & LabelIdProfile.Text & "'"
+        Query = "UPDATE Profile SET CompleteName=@Name, IdTypeOfBusiness=@TypeOfBusiness, Password=@Password, Ubication=@Ubication WHERE Id = '" & LabelIdProfile.Text & "'"
 
 
         Dim Command As SqlCommand
@@ -112,7 +107,7 @@ Public Class EditarPerfil
 
             .Parameters.AddWithValue("@Name", Name)
             .Parameters.AddWithValue("@TypeOfBusiness", TypeOfBusiness)
-            .Parameters.AddWithValue("@Email", Email)
+
             .Parameters.AddWithValue("@Password", Password)
             .Parameters.AddWithValue("@Ubication", Ubication)
 
@@ -125,7 +120,7 @@ Public Class EditarPerfil
         Connection.Close()
 
 
-        MsgBox("Tú perfil ha sido guardado con la siguiente información" & vbCrLf & vbCrLf & "Nombre: " & Name & vbCrLf & "Tipo de Negocio: " & TypeOfBusiness & vbCrLf & "Email: " & Email & vbCrLf & "Password: " & Password & vbCrLf & "Ubication: " & Ubication)
+        MsgBox("Tú perfil ha sido guardado con la siguiente información" & vbCrLf & vbCrLf & "Nombre: " & Name & vbCrLf & "Tipo de Negocio: " & TypeOfBusiness & vbCrLf & "Password: " & Password & vbCrLf & "Ubication: " & Ubication)
 
         Me.Close()
 
