@@ -71,6 +71,7 @@ Partial Class NuevoProductoCliente
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(414, 356)
         Me.Name = "NuevoProductoCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Nuevo Producto "
         CType(Me.NumericUpDownQuantityClient, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

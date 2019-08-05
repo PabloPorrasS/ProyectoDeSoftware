@@ -145,6 +145,7 @@ Partial Class EditarPerfil
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(394, 489)
         Me.Name = "EditarPerfil"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditarPerfil"
         Me.ResumeLayout(False)
         Me.PerformLayout()

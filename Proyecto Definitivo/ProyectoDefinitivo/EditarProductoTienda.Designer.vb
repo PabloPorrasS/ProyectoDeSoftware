@@ -80,6 +80,7 @@ Partial Class EditarProductoTienda
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(414, 356)
         Me.Name = "EditarProductoTienda"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditarProductoTienda"
         Me.ResumeLayout(False)
         Me.PerformLayout()

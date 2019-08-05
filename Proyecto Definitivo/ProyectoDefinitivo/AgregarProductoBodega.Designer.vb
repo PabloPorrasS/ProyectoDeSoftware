@@ -175,6 +175,7 @@ Partial Class AgregarProductoBodega
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(450, 564)
         Me.Name = "AgregarProductoBodega"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar Producto"
         CType(Me.NumericUpDownQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

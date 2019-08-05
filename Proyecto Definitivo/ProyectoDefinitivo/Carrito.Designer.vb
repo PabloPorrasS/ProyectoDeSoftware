@@ -187,6 +187,7 @@ Partial Class Carrito
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1032, 622)
         Me.Name = "Carrito"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Carrito"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

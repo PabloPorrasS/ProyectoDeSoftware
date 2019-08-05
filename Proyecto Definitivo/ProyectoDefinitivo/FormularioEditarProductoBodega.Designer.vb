@@ -190,6 +190,7 @@ Partial Class FormularioEditar
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(394, 489)
         Me.Name = "FormularioEditar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Editar Productos"
         CType(Me.NumericUpDownQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

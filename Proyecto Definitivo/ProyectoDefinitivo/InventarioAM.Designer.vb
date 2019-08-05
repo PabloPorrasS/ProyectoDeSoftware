@@ -193,6 +193,7 @@ Partial Class InventarioAM
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1032, 622)
         Me.Name = "InventarioAM"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inventario"
         CType(Me.ProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InventoryDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
