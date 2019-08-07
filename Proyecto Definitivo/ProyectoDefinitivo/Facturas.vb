@@ -2,7 +2,7 @@
 Public Class Facturas
     Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
 
     Private Sub Facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -41,7 +41,7 @@ Public Class Facturas
 
         Dim Bills As New DataTable
 
-        SelectQuery = "SELECT  Id_Profile 'Id_Profile', Id_Product 'Id_Product', Fecha 'Date', TotalPagado 'Total Pagado' FROM Bills WHERE Id_Profile ='" & Id & "'"
+        SelectQuery = "SELECT  Id_Profile 'Id_Profile', Id 'Id', Fecha 'Date' FROM Bills WHERE Id_Profile ='" & Id & "'"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(Bills)

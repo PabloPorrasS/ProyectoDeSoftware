@@ -72,6 +72,12 @@ Public Class FormularioDeRegistro
         Command.Dispose()
         Connection.Close()
 
+        'Try
+
+
+        'Catch ex As Exception
+
+        'End Try
 
         MsgBox("Tú perfil ha sido guardado con la siguiente información" & vbCrLf & vbCrLf & "Nombre: " & CompleteName & vbCrLf & "Email: " & Email & vbCrLf & "Contraseña: " & Password & vbCrLf & "Tipo de Negocio: " & TypeOfBusiness & vbCrLf & "Ubicación del negocio: " & Ubication)
         Me.Close()

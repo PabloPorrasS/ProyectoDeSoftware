@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Carrito
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
     Public rowOfGridview As Integer
     Dim Name As String
     Dim Brand As String
@@ -148,11 +148,54 @@ Public Class Carrito
         Connection.Open()
         Command.ExecuteNonQuery()
         Command.Dispose()
+        Connection.Close()
 
+
+
+        Dim NewQuantityProducts As Integer
+        Dim QuantityAM As Integer
+
+        Dim commandselect As SqlCommand
+        Dim SelectQuery As String
+        SelectQuery = "Select * FROM Products WHERE Id ='" & IdProduct & "'"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Connection.Open()
+
+        Dim reader As SqlDataReader
+        reader = commandselect.ExecuteReader()
+
+        If reader.HasRows Then
+            reader.Read()
+            QuantityAM = reader.GetInt32(5)
+
+        End If
+
+
+        NewQuantityProducts = QuantityAM - Quantity
+
+
+
+        Connection.Close()
+
+
+        Query = "UPDATE Products SET Quantity=@NewQuantityProducts WHERE Id = '" & IdProduct & "'"
+
+        Command = New SqlCommand(Query, Connection)
+
+        With Command
+            .Parameters.AddWithValue("@NewQuantityProducts", NewQuantityProducts)
+
+        End With
+
+        Connection.Open()
+        Command.ExecuteNonQuery()
+        Command.Dispose()
+        Connection.Close()
 
 
         Query = "DELETE FROM ShoppingCart WHERE Id_Product ='" & IdProduct & "'"
         Command = New SqlCommand(Query, Connection)
+        Connection.Open()
         Command.ExecuteNonQuery()
         Command.Dispose()
         Connection.Close()
@@ -161,6 +204,31 @@ Public Class Carrito
 
         DataGridView1.DataSource = Nothing
         LoadGridView()
+
+
+        'Query = "INSERT INTO Bills (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
+
+
+        'Command = New SqlCommand(Query, Connection)
+
+        'With Command
+
+        '    .Parameters.AddWithValue("@Id_Product", IdProduct)
+        '    .Parameters.AddWithValue("@Id", Id)
+        '    .Parameters.AddWithValue("@Name", Name)
+        '    .Parameters.AddWithValue("@Brand", Brand)
+        '    .Parameters.AddWithValue("@Category", Category)
+        '    .Parameters.AddWithValue("@Code", Code)
+        '    .Parameters.AddWithValue("@Quantity", Quantity)
+        '    .Parameters.AddWithValue("@Price", Price)
+
+        'End With
+
+
+        'Command.ExecuteNonQuery()
+        'Command.Dispose()
+        'Connection.Close()
+
 
 
 

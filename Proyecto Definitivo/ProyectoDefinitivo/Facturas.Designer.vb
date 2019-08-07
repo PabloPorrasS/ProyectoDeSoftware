@@ -29,6 +29,8 @@ Partial Class Facturas
         Me.ButtonTrends = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Id_Profile = New System.Windows.Forms.Label()
+        Me.reportDocument1 = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
+        Me.reportDocument2 = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -139,4 +141,6 @@ Partial Class Facturas
     Friend WithEvents ButtonTrends As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Id_Profile As Label
+    Friend WithEvents reportDocument1 As CrystalDecisions.CrystalReports.Engine.ReportDocument
+    Friend WithEvents reportDocument2 As CrystalDecisions.CrystalReports.Engine.ReportDocument
 End Class
