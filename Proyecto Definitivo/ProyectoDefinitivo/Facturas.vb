@@ -2,7 +2,7 @@
 Public Class Facturas
     Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB6-10;Initial Catalog=Inventory;User ID=sa;Password=123456"
 
     Private Sub Facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

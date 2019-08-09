@@ -33,8 +33,11 @@ Partial Class HomeCliente
         Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,6 +50,7 @@ Partial Class HomeCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.LabelId_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonEditProfile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
@@ -56,6 +60,10 @@ Partial Class HomeCliente
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonDelivery)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonBill)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonMyInventory)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.CrystalReportViewer1)
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 0
@@ -168,6 +176,26 @@ Partial Class HomeCliente
         Me.ButtonMyInventory.Text = "Mi inventario"
         Me.ButtonMyInventory.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(128, 485)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(674, 583)
+        Me.CrystalReportViewer1.TabIndex = 0
+        '
         'HomeCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -183,6 +211,7 @@ Partial Class HomeCliente
         Me.Text = "Home"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -199,4 +228,6 @@ Partial Class HomeCliente
     Friend WithEvents ButtonOrders As Button
     Friend WithEvents ButtonEditProfile As Button
     Friend WithEvents LabelId_Profile As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Carrito
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB6-10;Initial Catalog=Inventory;User ID=sa;Password=123456"
     Public rowOfGridview As Integer
     Dim Name As String
     Dim Brand As String
@@ -54,7 +54,7 @@ Public Class Carrito
 
         Dim ProductsTable As New DataTable
 
-        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantity 'Cantidad', Price 'Precio unitario', TotalPrice 'Precio Total' FROM ShoppingCart"
+        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantiy 'Cantidad', Price 'Precio unitario' FROM ShoppingCart WHERE Id_Profile ='" & HomeCliente.LabelId_Profile.Text & "'"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(ProductsTable)
@@ -240,5 +240,24 @@ Public Class Carrito
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         EditarCarrito.Show()
+    End Sub
+
+    Private Sub ButtonGenerateBill_Click(sender As Object, e As EventArgs) Handles ButtonGenerateBill.Click
+
+        Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
+
+        Dim SqlConnection As SqlConnection = New SqlConnection(ConnectionString)
+
+        Dim sqlcommand As SqlCommand = New SqlCommand("GenerateSalesReport", SqlConnection)
+        sqlcommand.CommandType = CommandType.StoredProcedure
+        SqlConnection.Open()
+        sqlcommand.Parameters.AddWithValue("@Id", ParametroId)
+        SqlConnection.Close()
+
+
+
+
+
+
     End Sub
 End Class

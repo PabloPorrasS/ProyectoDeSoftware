@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class NuevoProductoCliente
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB6-10;Initial Catalog=Inventory;User ID=sa;Password=123456"
     Dim Name As String
     Dim Brand As String
     Dim Category As String
@@ -51,7 +51,7 @@ Public Class NuevoProductoCliente
 
         TotalPrice = Quantity * Price
 
-        Query = "INSERT INTO ShoppingCart (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price, TotalPrice) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price, @TotalPrice)"
+        Query = "INSERT INTO ShoppingCart (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantiy, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
 
         Dim Command As SqlCommand
         Command = New SqlCommand(Query, Connection)
@@ -66,7 +66,7 @@ Public Class NuevoProductoCliente
             .Parameters.AddWithValue("@Code", Code)
             .Parameters.AddWithValue("@Quantity", Quantity)
             .Parameters.AddWithValue("@Price", Price)
-            .Parameters.AddWithValue("@TotalPrice", TotalPrice)
+
 
         End With
 

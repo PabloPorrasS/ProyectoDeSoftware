@@ -34,6 +34,7 @@ Partial Class Carrito
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.ButtonOrders = New System.Windows.Forms.Button()
+        Me.ButtonGenerateBill = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -118,9 +119,9 @@ Partial Class Carrito
         Me.ButtonConfirmPurchase.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.ButtonConfirmPurchase.Location = New System.Drawing.Point(273, 534)
         Me.ButtonConfirmPurchase.Name = "ButtonConfirmPurchase"
-        Me.ButtonConfirmPurchase.Size = New System.Drawing.Size(752, 49)
+        Me.ButtonConfirmPurchase.Size = New System.Drawing.Size(367, 49)
         Me.ButtonConfirmPurchase.TabIndex = 24
-        Me.ButtonConfirmPurchase.Text = "Confirmar compra"
+        Me.ButtonConfirmPurchase.Text = "Confirmar compra de producto"
         Me.ButtonConfirmPurchase.UseVisualStyleBackColor = False
         '
         'ButtonEdit
@@ -165,12 +166,26 @@ Partial Class Carrito
         Me.ButtonOrders.Text = "Pedidos"
         Me.ButtonOrders.UseVisualStyleBackColor = True
         '
+        'ButtonGenerateBill
+        '
+        Me.ButtonGenerateBill.BackColor = System.Drawing.Color.Salmon
+        Me.ButtonGenerateBill.FlatAppearance.BorderSize = 0
+        Me.ButtonGenerateBill.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonGenerateBill.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.ButtonGenerateBill.Location = New System.Drawing.Point(638, 534)
+        Me.ButtonGenerateBill.Name = "ButtonGenerateBill"
+        Me.ButtonGenerateBill.Size = New System.Drawing.Size(379, 49)
+        Me.ButtonGenerateBill.TabIndex = 32
+        Me.ButtonGenerateBill.Text = "Generar factura"
+        Me.ButtonGenerateBill.UseVisualStyleBackColor = False
+        '
         'Carrito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1016, 583)
+        Me.Controls.Add(Me.ButtonGenerateBill)
         Me.Controls.Add(Me.ButtonOrders)
         Me.Controls.Add(Me.ButtonShoppingCart)
         Me.Controls.Add(Me.ButtonTrends)
@@ -205,4 +220,5 @@ Partial Class Carrito
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents ButtonOrders As Button
+    Friend WithEvents ButtonGenerateBill As Button
 End Class

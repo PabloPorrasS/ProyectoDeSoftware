@@ -1,6 +1,9 @@
 ﻿Imports System.Data.SqlClient
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+
 Public Class HomeCliente
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB6-10;Initial Catalog=Inventory;User ID=sa;Password=123456"
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -34,17 +37,17 @@ Public Class HomeCliente
 
 
         SelectQuery = "Select * FROM Profile WHERE Email = '" & Login.TextBoxEmail.Text & "'"
-        commandSelect = New SqlCommand(SelectQuery, Connection)
+        commandselect = New SqlCommand(SelectQuery, Connection)
 
 
         Connection.Open()
-        Reader = commandSelect.ExecuteReader
+        reader = commandselect.ExecuteReader
 
 
-        While Reader.HasRows ' Has rows es mientras tenga columnas
-            Reader.Read()
+        While reader.HasRows ' Has rows es mientras tenga columnas
+            reader.Read()
 
-            LabelTypeOfUser.Text = Reader.GetInt32(6).ToString
+            LabelTypeOfUser.Text = reader.GetInt32(6).ToString
 
             Exit While
 
@@ -64,7 +67,7 @@ Public Class HomeCliente
     End Sub
 
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
-        PedidosCliente.show
+        PedidosCliente.Show()
     End Sub
 
     Private Sub ButtonEditProfile_Click(sender As Object, e As EventArgs) Handles ButtonEditProfile.Click
@@ -74,5 +77,34 @@ Public Class HomeCliente
 
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Dim cryRpt As New ReportDocument
+        Dim crtableLogoninfos As New TableLogOnInfos
+        Dim crtableLogoninfo As New TableLogOnInfo
+        Dim crConnectionInfo As New ConnectionInfo
+        Dim CrTables As Tables
+        Dim CrTable As Table
+
+        cryRpt.Load("C:\Users\Laboratorio\Source\Repos\PabloPorrasS\ProyectoDeSoftware\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
+
+        With crConnectionInfo
+            .ServerName = "SP-LA-LAB6-10"
+            .DatabaseName = "Inventory"
+            .UserID = "sa"
+            .Password = "123456"
+        End With
+
+        CrTables = cryRpt.Database.Tables
+        For Each CrTable In CrTables
+            crtableLogoninfo = CrTable.LogOnInfo
+            crtableLogoninfo.ConnectionInfo = crConnectionInfo
+            CrTable.ApplyLogOnInfo(crtableLogoninfo)
+        Next
+
+        CrystalReportViewer1.ReportSource = cryRpt
+        CrystalReportViewer1.Refresh()
     End Sub
 End Class
