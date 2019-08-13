@@ -2,7 +2,7 @@
 Public Class InventarioCliente
     Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-14;Initial Catalog=Inventory;Integrated Security=True"
 
 
 
@@ -124,6 +124,12 @@ Public Class InventarioCliente
     End Sub
 
     Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
+
+    End Sub
+
+    Private Sub Buttonhome_Click(sender As Object, e As EventArgs) Handles Buttonhome.Click
+        HomeCliente.Show()
+        Me.Hide()
 
     End Sub
 End Class
