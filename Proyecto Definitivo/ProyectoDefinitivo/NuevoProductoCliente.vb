@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class NuevoProductoCliente
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB6-10;Initial Catalog=Inventory;User ID=sa;Password=123456"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     Dim Name As String
     Dim Brand As String
     Dim Category As String

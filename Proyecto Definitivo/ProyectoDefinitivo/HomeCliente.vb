@@ -3,7 +3,7 @@ Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
 Public Class HomeCliente
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB6-10;Initial Catalog=Inventory;User ID=sa;Password=123456"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
