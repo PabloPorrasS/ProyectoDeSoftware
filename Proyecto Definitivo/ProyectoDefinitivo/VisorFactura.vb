@@ -24,28 +24,14 @@ Public Class VisorFactura
         Command.ExecuteNonQuery()
         Connection.Close()
 
-
-
-
-
-
-        'Dim Command As SqlCommand = New SqlCommand("GeneralSalesReport", Connection)
-        'Command.CommandType = CommandType.StoredProcedure
-        'Connection.Open()
-        'Command.Parameters.AddWithValue("@Id", ParametroId)
-        'Connection.Close()
-
-
         Dim DataSet As New DataSet
         Dim DataAdapter As New SqlDataAdapter
 
 
         Connection.Open()
         Command.Connection = Connection
-        'Command.Parameters.Clear()
         Command.CommandType = CommandType.StoredProcedure
         Command.CommandText = "GeneralSalesReport"
-        'Command.Parameters.AddWithValue("@Id", ParametroId)
         Command.ExecuteNonQuery()
 
         DataAdapter.SelectCommand = Command

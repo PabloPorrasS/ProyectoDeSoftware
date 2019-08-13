@@ -228,15 +228,11 @@ Public Class Carrito
 
     Private Sub ButtonGenerateBill_Click(sender As Object, e As EventArgs) Handles ButtonGenerateBill.Click
 
-        'Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
+        Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
 
-        'Dim SqlConnection As SqlConnection = New SqlConnection(ConnectionString)
+        Dim Connection As SqlConnection = New SqlConnection(ConnectionString)
 
-        'Dim sqlcommand As SqlCommand = New SqlCommand("GeneralSalesReport", SqlConnection)
-        'sqlcommand.CommandType = CommandType.StoredProcedure
-        'SqlConnection.Open()
-        'sqlcommand.Parameters.AddWithValue("@Id", ParametroId)
-        'SqlConnection.Close()
+        Dim Command As SqlCommand = New SqlCommand("GeneralSalesReport", Connection)
 
         Dim cryRpt As New ReportDocument
         Dim crtableLogoninfos As New TableLogOnInfos
