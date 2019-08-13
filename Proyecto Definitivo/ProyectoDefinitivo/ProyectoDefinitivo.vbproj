@@ -92,12 +92,6 @@
     <Compile Include="Carrito.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrystalReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -243,6 +237,12 @@
     <Compile Include="PedidosCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VisorFactura.Designer.vb">
+      <DependentUpon>VisorFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisorFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AgregarProductoBodega.resx">
@@ -250,10 +250,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Carrito.resx">
       <DependentUpon>Carrito.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -303,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PedidosCliente.resx">
       <DependentUpon>PedidosCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisorFactura.resx">
+      <DependentUpon>VisorFactura.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
