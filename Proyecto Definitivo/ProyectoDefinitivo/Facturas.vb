@@ -2,7 +2,7 @@
 Public Class Facturas
     Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-14;Initial Catalog=Inventory;Integrated Security=True"
 
     Private Sub Facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -80,5 +80,11 @@ Public Class Facturas
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Buttonhome_Click(sender As Object, e As EventArgs) Handles Buttonhome.Click
+        HomeCliente.Show()
+        Me.Close()
+
     End Sub
 End Class

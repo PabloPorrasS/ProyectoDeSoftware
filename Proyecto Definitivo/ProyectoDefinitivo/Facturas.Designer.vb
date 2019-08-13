@@ -32,6 +32,7 @@ Partial Class Facturas
         Me.reportDocument2 = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
+        Me.Buttonhome = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +51,7 @@ Partial Class Facturas
         Me.ButtonInventory.FlatAppearance.BorderSize = 0
         Me.ButtonInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonInventory.Location = New System.Drawing.Point(66, 352)
+        Me.ButtonInventory.Location = New System.Drawing.Point(66, 425)
         Me.ButtonInventory.Name = "ButtonInventory"
         Me.ButtonInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonInventory.TabIndex = 16
@@ -63,7 +64,7 @@ Partial Class Facturas
         Me.ButtonBill.FlatAppearance.BorderSize = 0
         Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(66, 253)
+        Me.ButtonBill.Location = New System.Drawing.Point(66, 329)
         Me.ButtonBill.Name = "ButtonBill"
         Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
         Me.ButtonBill.TabIndex = 17
@@ -95,7 +96,7 @@ Partial Class Facturas
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Button1.Location = New System.Drawing.Point(66, 161)
+        Me.Button1.Location = New System.Drawing.Point(66, 233)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(165, 44)
         Me.Button1.TabIndex = 24
@@ -115,11 +116,25 @@ Partial Class Facturas
         Me.ButtonShoppingCart.TabIndex = 25
         Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
+        'Buttonhome
+        '
+        Me.Buttonhome.BackColor = System.Drawing.Color.Green
+        Me.Buttonhome.FlatAppearance.BorderSize = 0
+        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Buttonhome.Location = New System.Drawing.Point(35, 139)
+        Me.Buttonhome.Name = "Buttonhome"
+        Me.Buttonhome.Size = New System.Drawing.Size(247, 44)
+        Me.Buttonhome.TabIndex = 26
+        Me.Buttonhome.Text = "Pagina Principal"
+        Me.Buttonhome.UseVisualStyleBackColor = False
+        '
         'Facturas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1016, 583)
+        Me.Controls.Add(Me.Buttonhome)
         Me.Controls.Add(Me.ButtonShoppingCart)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Id_Profile)
@@ -148,4 +163,5 @@ Partial Class Facturas
     Friend WithEvents reportDocument2 As CrystalDecisions.CrystalReports.Engine.ReportDocument
     Friend WithEvents Button1 As Button
     Friend WithEvents ButtonShoppingCart As Button
+    Friend WithEvents Buttonhome As Button
 End Class
