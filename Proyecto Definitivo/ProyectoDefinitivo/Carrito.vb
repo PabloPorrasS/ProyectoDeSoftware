@@ -3,7 +3,7 @@ Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
 Public Class Carrito
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-14;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     Public rowOfGridview As Integer
     Dim Name As String
     Dim Brand As String
@@ -228,15 +228,15 @@ Public Class Carrito
 
     Private Sub ButtonGenerateBill_Click(sender As Object, e As EventArgs) Handles ButtonGenerateBill.Click
 
-        Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
+        'Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
 
-        Dim SqlConnection As SqlConnection = New SqlConnection(ConnectionString)
+        'Dim SqlConnection As SqlConnection = New SqlConnection(ConnectionString)
 
-        Dim sqlcommand As SqlCommand = New SqlCommand("GenerateSalesReport", SqlConnection)
-        sqlcommand.CommandType = CommandType.StoredProcedure
-        SqlConnection.Open()
-        sqlcommand.Parameters.AddWithValue("@Id", ParametroId)
-        SqlConnection.Close()
+        'Dim sqlcommand As SqlCommand = New SqlCommand("GeneralSalesReport", SqlConnection)
+        'sqlcommand.CommandType = CommandType.StoredProcedure
+        'SqlConnection.Open()
+        'sqlcommand.Parameters.AddWithValue("@Id", ParametroId)
+        'SqlConnection.Close()
 
         Dim cryRpt As New ReportDocument
         Dim crtableLogoninfos As New TableLogOnInfos

@@ -108,6 +108,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetFacturas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetFacturas.vb">
+      <DependentUpon>DataSetFacturas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EditarCarrito.Designer.vb">
       <DependentUpon>EditarCarrito.vb</DependentUpon>
     </Compile>

@@ -12,7 +12,7 @@ Public Class PedidosCliente
 
     Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-14;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
 
     End Sub
