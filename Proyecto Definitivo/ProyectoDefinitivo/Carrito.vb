@@ -1,4 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+
 Public Class Carrito
     Dim ConnectionString As String = "Data Source=SP-LA-LAB9-14;Initial Catalog=Inventory;Integrated Security=True"
     Public rowOfGridview As Integer
@@ -144,7 +147,7 @@ Public Class Carrito
             .Parameters.AddWithValue("@Code", Code)
             .Parameters.AddWithValue("@Quantity", Quantity)
             .Parameters.AddWithValue("@Price", Price)
-            .Parameters.AddWithValue("@Invoiced", Invoiced)
+            .Parameters.AddWithValue("@Invoiced", invoiced)
 
         End With
 
@@ -235,10 +238,33 @@ Public Class Carrito
         sqlcommand.Parameters.AddWithValue("@Id", ParametroId)
         SqlConnection.Close()
 
+        Dim cryRpt As New ReportDocument
+        Dim crtableLogoninfos As New TableLogOnInfos
+        Dim crtableLogoninfo As New TableLogOnInfo
+        Dim crConnectionInfo As New ConnectionInfo
+        Dim CrTables As Tables
+        Dim CrTable As Table
 
+        cryRpt.Load("C:\Users\Laboratorio\Source\Repos\ProyectoDeSoftware\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
 
+        With crConnectionInfo
+            .ServerName = "SP-LA-LAB6-10"
+            .DatabaseName = "Inventory"
+            .UserID = "sa"
+            .Password = "123456"
+        End With
 
+        CrTables = cryRpt.Database.Tables
+        For Each CrTable In CrTables
+            crtableLogoninfo = CrTable.LogOnInfo
+            crtableLogoninfo.ConnectionInfo = crConnectionInfo
+            CrTable.ApplyLogOnInfo(crtableLogoninfo)
+        Next
 
+        VisorFactura.CrystalReportViewer1.ReportSource = cryRpt
+        VisorFactura.CrystalReportViewer1.Refresh()
+
+        VisorFactura.Show()
 
     End Sub
 
@@ -249,6 +275,8 @@ Public Class Carrito
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
         PedidosCliente.Show()
         Me.Hide()
+
+
 
     End Sub
 End Class

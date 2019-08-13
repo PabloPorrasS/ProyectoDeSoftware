@@ -105,6 +105,9 @@ Public Class HomeCliente
 
     Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
 
+
+
+
     End Sub
 
     Private Sub ButtonDelivery_Click(sender As Object, e As EventArgs)
