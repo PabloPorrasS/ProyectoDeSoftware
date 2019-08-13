@@ -57,7 +57,7 @@ Public Class HomeCliente
     End Sub
 
     Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
-
+        InventarioCliente.Show()
     End Sub
 
 
@@ -79,7 +79,7 @@ Public Class HomeCliente
         Carrito.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         Dim cryRpt As New ReportDocument
         Dim crtableLogoninfos As New TableLogOnInfos
@@ -106,5 +106,13 @@ Public Class HomeCliente
 
         CrystalReportViewer1.ReportSource = cryRpt
         CrystalReportViewer1.Refresh()
+    End Sub
+
+    Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
+
+    End Sub
+
+    Private Sub ButtonDelivery_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

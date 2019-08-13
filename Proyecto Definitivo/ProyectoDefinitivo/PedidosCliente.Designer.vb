@@ -29,8 +29,6 @@ Partial Class PedidosCliente
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.Id_Profile = New System.Windows.Forms.Label()
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonTrends = New System.Windows.Forms.Button()
-        Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
         Me.ButtonAddToCart = New System.Windows.Forms.Button()
@@ -64,8 +62,6 @@ Partial Class PedidosCliente
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Id_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonTrends)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonDelivery)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonBill)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonMyInventory)
         '
@@ -81,8 +77,8 @@ Partial Class PedidosCliente
         '
         Me.ButtonOrders.FlatAppearance.BorderSize = 0
         Me.ButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonOrders.Location = New System.Drawing.Point(91, 116)
+        Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonOrders.Location = New System.Drawing.Point(84, 159)
         Me.ButtonOrders.Name = "ButtonOrders"
         Me.ButtonOrders.Size = New System.Drawing.Size(165, 44)
         Me.ButtonOrders.TabIndex = 6
@@ -112,36 +108,12 @@ Partial Class PedidosCliente
         Me.ButtonShoppingCart.TabIndex = 4
         Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
-        'ButtonTrends
-        '
-        Me.ButtonTrends.FlatAppearance.BorderSize = 0
-        Me.ButtonTrends.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonTrends.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonTrends.Location = New System.Drawing.Point(91, 434)
-        Me.ButtonTrends.Name = "ButtonTrends"
-        Me.ButtonTrends.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonTrends.TabIndex = 3
-        Me.ButtonTrends.Text = "Tendencias"
-        Me.ButtonTrends.UseVisualStyleBackColor = True
-        '
-        'ButtonDelivery
-        '
-        Me.ButtonDelivery.FlatAppearance.BorderSize = 0
-        Me.ButtonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonDelivery.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonDelivery.Location = New System.Drawing.Point(91, 357)
-        Me.ButtonDelivery.Name = "ButtonDelivery"
-        Me.ButtonDelivery.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonDelivery.TabIndex = 2
-        Me.ButtonDelivery.Text = "Entregas"
-        Me.ButtonDelivery.UseVisualStyleBackColor = True
-        '
         'ButtonBill
         '
         Me.ButtonBill.FlatAppearance.BorderSize = 0
         Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(91, 278)
+        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonBill.Location = New System.Drawing.Point(84, 392)
         Me.ButtonBill.Name = "ButtonBill"
         Me.ButtonBill.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
@@ -153,8 +125,8 @@ Partial Class PedidosCliente
         '
         Me.ButtonMyInventory.FlatAppearance.BorderSize = 0
         Me.ButtonMyInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonMyInventory.Location = New System.Drawing.Point(91, 196)
+        Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonMyInventory.Location = New System.Drawing.Point(84, 277)
         Me.ButtonMyInventory.Name = "ButtonMyInventory"
         Me.ButtonMyInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonMyInventory.TabIndex = 0
@@ -242,8 +214,6 @@ Partial Class PedidosCliente
     Friend WithEvents ButtonOrders As Button
     Friend WithEvents Id_Profile As Label
     Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonTrends As Button
-    Friend WithEvents ButtonDelivery As Button
     Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonMyInventory As Button
     Friend WithEvents DataGridView1 As DataGridView

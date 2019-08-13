@@ -61,9 +61,6 @@ Public Class InventarioCliente
 
     End Sub
 
-    Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
-
-    End Sub
 
     Private Sub ButtonDeleteProduct_Click(sender As Object, e As EventArgs) Handles ButtonDeleteProduct.Click
 
@@ -91,15 +88,19 @@ Public Class InventarioCliente
     End Sub
 
     Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
-
+        Facturas.Show()
+        Me.Close()
     End Sub
 
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
         PedidosCliente.Show()
+        Me.Close()
     End Sub
 
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub InventarioCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -119,6 +120,10 @@ Public Class InventarioCliente
 
         EditarProductoTienda.Show()
 
+
+    End Sub
+
+    Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
 
     End Sub
 End Class
