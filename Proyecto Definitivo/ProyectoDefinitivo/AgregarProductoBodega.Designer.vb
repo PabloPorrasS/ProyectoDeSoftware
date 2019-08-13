@@ -136,6 +136,7 @@ Partial Class AgregarProductoBodega
         'NumericUpDownQuantity
         '
         Me.NumericUpDownQuantity.Location = New System.Drawing.Point(240, 329)
+        Me.NumericUpDownQuantity.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
         Me.NumericUpDownQuantity.Name = "NumericUpDownQuantity"
         Me.NumericUpDownQuantity.Size = New System.Drawing.Size(153, 20)
         Me.NumericUpDownQuantity.TabIndex = 11
