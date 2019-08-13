@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Carrito
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB6-10;Initial Catalog=Inventory;User ID=sa;Password=123456"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     Public rowOfGridview As Integer
     Dim Name As String
     Dim Brand As String
@@ -101,7 +101,7 @@ Public Class Carrito
 
         Dim Id As Integer
         Id = PedidosCliente.Id_Profile.Text
-
+        Dim invoiced As Integer = 0
 
 
 
@@ -127,7 +127,7 @@ Public Class Carrito
         Dim Connection As New SqlConnection(ConnectionString)
         Dim Query As String
 
-        Query = "INSERT INTO ClientProducts (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
+        Query = "INSERT INTO ClientProducts (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price, Invoiced) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price, @Invoiced)"
 
         Dim Command As SqlCommand
         Command = New SqlCommand(Query, Connection)
@@ -142,6 +142,7 @@ Public Class Carrito
             .Parameters.AddWithValue("@Code", Code)
             .Parameters.AddWithValue("@Quantity", Quantity)
             .Parameters.AddWithValue("@Price", Price)
+            .Parameters.AddWithValue("@Invoiced", Invoiced)
 
         End With
 
@@ -206,28 +207,6 @@ Public Class Carrito
         LoadGridView()
 
 
-        'Query = "INSERT INTO Bills (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
-
-
-        'Command = New SqlCommand(Query, Connection)
-
-        'With Command
-
-        '    .Parameters.AddWithValue("@Id_Product", IdProduct)
-        '    .Parameters.AddWithValue("@Id", Id)
-        '    .Parameters.AddWithValue("@Name", Name)
-        '    .Parameters.AddWithValue("@Brand", Brand)
-        '    .Parameters.AddWithValue("@Category", Category)
-        '    .Parameters.AddWithValue("@Code", Code)
-        '    .Parameters.AddWithValue("@Quantity", Quantity)
-        '    .Parameters.AddWithValue("@Price", Price)
-
-        'End With
-
-
-        'Command.ExecuteNonQuery()
-        'Command.Dispose()
-        'Connection.Close()
 
 
 
@@ -253,9 +232,6 @@ Public Class Carrito
         SqlConnection.Open()
         sqlcommand.Parameters.AddWithValue("@Id", ParametroId)
         SqlConnection.Close()
-
-
-
 
 
 

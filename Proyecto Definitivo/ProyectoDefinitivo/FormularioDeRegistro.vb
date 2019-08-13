@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class FormularioDeRegistro
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
     Private Sub FormularioDeRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim Connection As New SqlConnection(ConnectionString)
