@@ -100,4 +100,25 @@ Public Class PedidosCliente
 
 
     End Sub
+
+    Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
+        InventarioCliente.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+        Facturas.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
+
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+        Carrito.Show()
+        Me.Hide()
+
+
+    End Sub
 End Class

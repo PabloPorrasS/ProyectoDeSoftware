@@ -22,15 +22,16 @@ Partial Class Facturas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Facturas))
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.ButtonInventory = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
-        Me.ButtonDelivery = New System.Windows.Forms.Button()
-        Me.ButtonTrends = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Id_Profile = New System.Windows.Forms.Label()
         Me.reportDocument1 = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
         Me.reportDocument2 = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,7 +40,7 @@ Partial Class Facturas
         Me.Splitter1.BackColor = System.Drawing.Color.Green
         Me.Splitter1.Location = New System.Drawing.Point(0, 0)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(265, 450)
+        Me.Splitter1.Size = New System.Drawing.Size(313, 583)
         Me.Splitter1.TabIndex = 15
         Me.Splitter1.TabStop = False
         '
@@ -48,8 +49,8 @@ Partial Class Facturas
         Me.ButtonInventory.BackColor = System.Drawing.Color.Green
         Me.ButtonInventory.FlatAppearance.BorderSize = 0
         Me.ButtonInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonInventory.Location = New System.Drawing.Point(38, 88)
+        Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonInventory.Location = New System.Drawing.Point(66, 352)
         Me.ButtonInventory.Name = "ButtonInventory"
         Me.ButtonInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonInventory.TabIndex = 16
@@ -61,47 +62,21 @@ Partial Class Facturas
         Me.ButtonBill.BackColor = System.Drawing.Color.Green
         Me.ButtonBill.FlatAppearance.BorderSize = 0
         Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(38, 169)
+        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonBill.Location = New System.Drawing.Point(66, 253)
         Me.ButtonBill.Name = "ButtonBill"
         Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
         Me.ButtonBill.TabIndex = 17
         Me.ButtonBill.Text = "Facturas"
         Me.ButtonBill.UseVisualStyleBackColor = False
         '
-        'ButtonDelivery
-        '
-        Me.ButtonDelivery.BackColor = System.Drawing.Color.Green
-        Me.ButtonDelivery.FlatAppearance.BorderSize = 0
-        Me.ButtonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonDelivery.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonDelivery.Location = New System.Drawing.Point(38, 262)
-        Me.ButtonDelivery.Name = "ButtonDelivery"
-        Me.ButtonDelivery.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonDelivery.TabIndex = 18
-        Me.ButtonDelivery.Text = "Entregas"
-        Me.ButtonDelivery.UseVisualStyleBackColor = False
-        '
-        'ButtonTrends
-        '
-        Me.ButtonTrends.BackColor = System.Drawing.Color.Green
-        Me.ButtonTrends.FlatAppearance.BorderSize = 0
-        Me.ButtonTrends.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonTrends.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonTrends.Location = New System.Drawing.Point(38, 350)
-        Me.ButtonTrends.Name = "ButtonTrends"
-        Me.ButtonTrends.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonTrends.TabIndex = 19
-        Me.ButtonTrends.Text = "Tendencias"
-        Me.ButtonTrends.UseVisualStyleBackColor = False
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(271, 0)
+        Me.DataGridView1.Location = New System.Drawing.Point(303, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(528, 450)
+        Me.DataGridView1.Size = New System.Drawing.Size(721, 583)
         Me.DataGridView1.TabIndex = 22
         '
         'Id_Profile
@@ -114,18 +89,48 @@ Partial Class Facturas
         Me.Id_Profile.TabIndex = 23
         Me.Id_Profile.Text = "Label1"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Green
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Button1.Location = New System.Drawing.Point(66, 161)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(165, 44)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Pedidos"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'ButtonShoppingCart
+        '
+        Me.ButtonShoppingCart.AllowDrop = True
+        Me.ButtonShoppingCart.BackgroundImage = CType(resources.GetObject("ButtonShoppingCart.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
+        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
+        Me.ButtonShoppingCart.Location = New System.Drawing.Point(230, 534)
+        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
+        Me.ButtonShoppingCart.Size = New System.Drawing.Size(67, 37)
+        Me.ButtonShoppingCart.TabIndex = 25
+        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
+        '
         'Facturas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1016, 583)
+        Me.Controls.Add(Me.ButtonShoppingCart)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Id_Profile)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.ButtonTrends)
-        Me.Controls.Add(Me.ButtonDelivery)
         Me.Controls.Add(Me.ButtonBill)
         Me.Controls.Add(Me.ButtonInventory)
         Me.Controls.Add(Me.Splitter1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(1032, 622)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(1032, 622)
         Me.Name = "Facturas"
         Me.Text = "Facturas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -137,10 +142,10 @@ Partial Class Facturas
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents ButtonInventory As Button
     Friend WithEvents ButtonBill As Button
-    Friend WithEvents ButtonDelivery As Button
-    Friend WithEvents ButtonTrends As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Id_Profile As Label
     Friend WithEvents reportDocument1 As CrystalDecisions.CrystalReports.Engine.ReportDocument
     Friend WithEvents reportDocument2 As CrystalDecisions.CrystalReports.Engine.ReportDocument
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonShoppingCart As Button
 End Class

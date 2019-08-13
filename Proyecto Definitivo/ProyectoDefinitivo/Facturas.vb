@@ -60,4 +60,25 @@ Public Class Facturas
 
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        PedidosCliente.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+
+    End Sub
+
+    Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
+        InventarioCliente.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+        Carrito.Show()
+        Me.Hide()
+    End Sub
 End Class

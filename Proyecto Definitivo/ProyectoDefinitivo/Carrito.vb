@@ -90,10 +90,12 @@ Public Class Carrito
 
     Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
         InventarioCliente.Show()
+        Me.Hide()
     End Sub
 
     Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
-
+        Facturas.Show()
+        Me.Hide()
     End Sub
 
     Private Sub ButtonAddNewProduct_Click(sender As Object, e As EventArgs) Handles ButtonConfirmPurchase.Click
@@ -258,6 +260,16 @@ Public Class Carrito
 
 
 
+
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+
+    End Sub
+
+    Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
+        PedidosCliente.Show()
+        Me.Hide()
 
     End Sub
 End Class
