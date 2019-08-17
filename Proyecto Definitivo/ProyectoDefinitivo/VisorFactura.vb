@@ -3,7 +3,7 @@ Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
 Public Class VisorFactura
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
     Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
 
     End Sub
@@ -35,7 +35,7 @@ Public Class VisorFactura
         Command.ExecuteNonQuery()
 
         DataAdapter.SelectCommand = Command
-        DataAdapter.Fill(DataSet, "DataSetFacturas")
+        DataAdapter.Fill(DataSet, "GeneralSalesReport")
 
         Dim Rpt As New CrystalReport1
         Rpt.SetDataSource(DataSet)

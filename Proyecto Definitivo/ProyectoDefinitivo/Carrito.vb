@@ -3,7 +3,7 @@ Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
 Public Class Carrito
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
     Public rowOfGridview As Integer
     Dim Name As String
     Dim Brand As String
@@ -241,13 +241,13 @@ Public Class Carrito
         Dim CrTables As Tables
         Dim CrTable As Table
 
-        cryRpt.Load("C:\Users\Laboratorio\Source\Repos\ProyectoDeSoftware\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
+        cryRpt.Load("C:\Users\Pablo Porras\Source\Repos\ProyectoDeSoftware3\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
 
         With crConnectionInfo
-            .ServerName = "SP-LA-LAB6-10"
+            .ServerName = "PABLOPORRAS-PC"
             .DatabaseName = "Inventory"
-            .UserID = "sa"
-            .Password = "123456"
+            '.UserID = "sa"
+            '.Password = "123456"
         End With
 
         CrTables = cryRpt.Database.Tables

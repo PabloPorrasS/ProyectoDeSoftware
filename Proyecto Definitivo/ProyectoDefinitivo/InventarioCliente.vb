@@ -2,7 +2,7 @@
 Public Class InventarioCliente
     Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
 
 
 
