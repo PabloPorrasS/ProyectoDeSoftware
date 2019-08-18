@@ -89,6 +89,7 @@ Partial Class Facturas
         Me.Id_Profile.Size = New System.Drawing.Size(39, 13)
         Me.Id_Profile.TabIndex = 23
         Me.Id_Profile.Text = "Label1"
+        Me.Id_Profile.Visible = False
         '
         'Button1
         '

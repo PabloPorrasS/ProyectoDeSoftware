@@ -118,7 +118,7 @@ Public Class PedidosCliente
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
         Me.Hide()
-
+        Carrito.LoadGridView()
 
     End Sub
 

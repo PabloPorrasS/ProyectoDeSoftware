@@ -74,7 +74,7 @@ Public Class InventarioCliente
         Connection.Open()
         commandDelete.ExecuteNonQuery()
         Connection.Close()
-        Me.Close()
+
 
         'DataGridView1.DataSource = Nothing
         LoadGridView()
@@ -100,7 +100,7 @@ Public Class InventarioCliente
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
         Me.Hide()
-
+        Carrito.LoadGridView()
     End Sub
 
     Private Sub InventarioCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load

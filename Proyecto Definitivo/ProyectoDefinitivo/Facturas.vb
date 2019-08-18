@@ -41,7 +41,7 @@ Public Class Facturas
 
         Dim Bills As New DataTable
 
-        SelectQuery = "SELECT  Id_Profile 'Id_Profile', Id 'Id', Fecha 'Date' FROM Bills WHERE Id_Profile ='" & Id & "'"
+        SelectQuery = "SELECT  Id_Profile 'Id_Profile', Id 'No.Factura', Date 'Fecha' FROM Bills WHERE Id_Profile ='" & Id & "'"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(Bills)
@@ -52,6 +52,11 @@ Public Class Facturas
 
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.AllowUserToDeleteRows = False
+
+
+
+
+
 
     End Sub
 

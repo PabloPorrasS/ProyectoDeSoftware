@@ -41,6 +41,26 @@ Public Class VisorFactura
         Rpt.SetDataSource(DataSet)
         CrystalReportViewer1.ReportSource = Rpt
 
+        Connection.Close()
+        Dim Query As String
+        Dim invoiced As Integer = 1
+
+        Query = "UPDATE ClientProducts SET Invoiced=@Invoiced WHERE Id_Profile = '" & HomeCliente.LabelId_Profile.Text & "'"
+
+        Command = New SqlCommand(Query, Connection)
+
+        With Command
+            .Parameters.AddWithValue("@Invoiced", Invoiced)
+
+        End With
+
+        Connection.Open()
+        Command.ExecuteNonQuery()
+        Command.Dispose()
+        Connection.Close()
+
+
+
 
     End Sub
 End Class

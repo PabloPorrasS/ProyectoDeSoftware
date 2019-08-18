@@ -72,42 +72,7 @@ Public Class HomeCliente
 
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-        Dim cryRpt As New ReportDocument
-        Dim crtableLogoninfos As New TableLogOnInfos
-        Dim crtableLogoninfo As New TableLogOnInfo
-        Dim crConnectionInfo As New ConnectionInfo
-        Dim CrTables As Tables
-        Dim CrTable As Table
-
-        cryRpt.Load("C:\Users\Laboratorio\Source\Repos\PabloPorrasS\ProyectoDeSoftware\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
-
-        With crConnectionInfo
-            .ServerName = "SP-LA-LAB6-10"
-            .DatabaseName = "Inventory"
-            .UserID = "sa"
-            .Password = "123456"
-        End With
-
-        CrTables = cryRpt.Database.Tables
-        For Each CrTable In CrTables
-            crtableLogoninfo = CrTable.LogOnInfo
-            crtableLogoninfo.ConnectionInfo = crConnectionInfo
-            CrTable.ApplyLogOnInfo(crtableLogoninfo)
-        Next
-
-        CrystalReportViewer1.ReportSource = cryRpt
-        CrystalReportViewer1.Refresh()
-    End Sub
-
-    Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
-
-
-
-
+        Carrito.LoadGridView()
     End Sub
 
     Private Sub ButtonDelivery_Click(sender As Object, e As EventArgs)
