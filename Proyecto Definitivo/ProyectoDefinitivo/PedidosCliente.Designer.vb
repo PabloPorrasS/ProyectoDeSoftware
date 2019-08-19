@@ -111,7 +111,7 @@ Partial Class PedidosCliente
         'Id_Profile
         '
         Me.Id_Profile.AutoSize = True
-        Me.Id_Profile.Location = New System.Drawing.Point(12, 12)
+        Me.Id_Profile.Location = New System.Drawing.Point(21, 31)
         Me.Id_Profile.Name = "Id_Profile"
         Me.Id_Profile.Size = New System.Drawing.Size(39, 13)
         Me.Id_Profile.TabIndex = 5
