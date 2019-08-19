@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class InventarioCliente
-    Dim rowOfGridview As Integer
+    Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
 
 
 
@@ -53,10 +53,7 @@ Public Class InventarioCliente
 
     End Sub
 
-    Private Sub ButtonAddNewProduct_Click(sender As Object, e As EventArgs) Handles ButtonAddEdit.Click
-        NuevoProductoCliente.Show()
 
-    End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
@@ -64,9 +61,6 @@ Public Class InventarioCliente
 
     End Sub
 
-    Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
-
-    End Sub
 
     Private Sub ButtonDeleteProduct_Click(sender As Object, e As EventArgs) Handles ButtonDeleteProduct.Click
 
@@ -80,9 +74,9 @@ Public Class InventarioCliente
         Connection.Open()
         commandDelete.ExecuteNonQuery()
         Connection.Close()
-        Me.Close()
 
-        DataGridView1.DataSource = Nothing
+
+        'DataGridView1.DataSource = Nothing
         LoadGridView()
 
 
@@ -94,15 +88,19 @@ Public Class InventarioCliente
     End Sub
 
     Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
-
+        Facturas.Show()
+        Me.Close()
     End Sub
 
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
         PedidosCliente.Show()
+        Me.Close()
     End Sub
 
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
+        Me.Hide()
+        Carrito.LoadGridView()
     End Sub
 
     Private Sub InventarioCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -115,6 +113,23 @@ Public Class InventarioCliente
 
 
 
+
+    End Sub
+
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+
+        EditarProductoTienda.Show()
+
+
+    End Sub
+
+    Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
+
+    End Sub
+
+    Private Sub Buttonhome_Click(sender As Object, e As EventArgs) Handles Buttonhome.Click
+        HomeCliente.Show()
+        Me.Hide()
 
     End Sub
 End Class

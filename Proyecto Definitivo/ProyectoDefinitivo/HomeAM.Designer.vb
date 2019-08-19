@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class HomeAM
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,16 @@ Partial Class HomeAM
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeAM))
         Me.Splitter1 = New System.Windows.Forms.Splitter()
-        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonTrends = New System.Windows.Forms.Button()
-        Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonInventory = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LabelWelcomeAM = New System.Windows.Forms.Label()
+        Me.LabelNameWelcomeAM = New System.Windows.Forms.Label()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Splitter1
@@ -40,51 +41,12 @@ Partial Class HomeAM
         Me.Splitter1.TabIndex = 10
         Me.Splitter1.TabStop = False
         '
-        'ButtonShoppingCart
-        '
-        Me.ButtonShoppingCart.AllowDrop = True
-        Me.ButtonShoppingCart.BackgroundImage = CType(resources.GetObject("ButtonShoppingCart.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
-        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonShoppingCart.Location = New System.Drawing.Point(200, 493)
-        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
-        Me.ButtonShoppingCart.Size = New System.Drawing.Size(74, 37)
-        Me.ButtonShoppingCart.TabIndex = 15
-        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
-        '
-        'ButtonTrends
-        '
-        Me.ButtonTrends.BackColor = System.Drawing.Color.Green
-        Me.ButtonTrends.FlatAppearance.BorderSize = 0
-        Me.ButtonTrends.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonTrends.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonTrends.Location = New System.Drawing.Point(62, 315)
-        Me.ButtonTrends.Name = "ButtonTrends"
-        Me.ButtonTrends.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonTrends.TabIndex = 14
-        Me.ButtonTrends.Text = "Tendencias"
-        Me.ButtonTrends.UseVisualStyleBackColor = False
-        '
-        'ButtonDelivery
-        '
-        Me.ButtonDelivery.BackColor = System.Drawing.Color.Green
-        Me.ButtonDelivery.FlatAppearance.BorderSize = 0
-        Me.ButtonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonDelivery.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonDelivery.Location = New System.Drawing.Point(62, 234)
-        Me.ButtonDelivery.Name = "ButtonDelivery"
-        Me.ButtonDelivery.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonDelivery.TabIndex = 13
-        Me.ButtonDelivery.Text = "Entregas"
-        Me.ButtonDelivery.UseVisualStyleBackColor = False
-        '
         'ButtonBill
         '
         Me.ButtonBill.BackColor = System.Drawing.Color.Green
         Me.ButtonBill.FlatAppearance.BorderSize = 0
         Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
+        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
         Me.ButtonBill.Location = New System.Drawing.Point(62, 159)
         Me.ButtonBill.Name = "ButtonBill"
         Me.ButtonBill.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -98,7 +60,7 @@ Partial Class HomeAM
         Me.ButtonInventory.BackColor = System.Drawing.Color.Green
         Me.ButtonInventory.FlatAppearance.BorderSize = 0
         Me.ButtonInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
+        Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
         Me.ButtonInventory.Location = New System.Drawing.Point(62, 89)
         Me.ButtonInventory.Name = "ButtonInventory"
         Me.ButtonInventory.Size = New System.Drawing.Size(165, 44)
@@ -106,15 +68,47 @@ Partial Class HomeAM
         Me.ButtonInventory.Text = "Inventario"
         Me.ButtonInventory.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(494, 255)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(335, 243)
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
+        'LabelWelcomeAM
+        '
+        Me.LabelWelcomeAM.AutoSize = True
+        Me.LabelWelcomeAM.Font = New System.Drawing.Font("Elephant", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelWelcomeAM.ForeColor = System.Drawing.Color.Green
+        Me.LabelWelcomeAM.Location = New System.Drawing.Point(483, 44)
+        Me.LabelWelcomeAM.Name = "LabelWelcomeAM"
+        Me.LabelWelcomeAM.Size = New System.Drawing.Size(317, 62)
+        Me.LabelWelcomeAM.TabIndex = 14
+        Me.LabelWelcomeAM.Text = "Bienvenido "
+        Me.LabelWelcomeAM.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LabelNameWelcomeAM
+        '
+        Me.LabelNameWelcomeAM.AutoSize = True
+        Me.LabelNameWelcomeAM.Font = New System.Drawing.Font("Elephant", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNameWelcomeAM.ForeColor = System.Drawing.Color.Green
+        Me.LabelNameWelcomeAM.Location = New System.Drawing.Point(489, 159)
+        Me.LabelNameWelcomeAM.Name = "LabelNameWelcomeAM"
+        Me.LabelNameWelcomeAM.Size = New System.Drawing.Size(239, 27)
+        Me.LabelNameWelcomeAM.TabIndex = 15
+        Me.LabelNameWelcomeAM.Text = "oihdsfkgfsdkugsdfkjgf"
+        '
         'HomeAM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1016, 583)
-        Me.Controls.Add(Me.ButtonShoppingCart)
-        Me.Controls.Add(Me.ButtonTrends)
-        Me.Controls.Add(Me.ButtonDelivery)
+        Me.Controls.Add(Me.LabelNameWelcomeAM)
+        Me.Controls.Add(Me.LabelWelcomeAM)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ButtonBill)
         Me.Controls.Add(Me.ButtonInventory)
         Me.Controls.Add(Me.Splitter1)
@@ -123,15 +117,18 @@ Partial Class HomeAM
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1032, 622)
         Me.Name = "HomeAM"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Home"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Splitter1 As Splitter
-    Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonTrends As Button
-    Friend WithEvents ButtonDelivery As Button
     Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonInventory As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents LabelWelcomeAM As Label
+    Friend WithEvents LabelNameWelcomeAM As Label
 End Class

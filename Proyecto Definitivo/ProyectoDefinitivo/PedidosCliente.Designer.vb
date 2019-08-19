@@ -29,8 +29,6 @@ Partial Class PedidosCliente
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.Id_Profile = New System.Windows.Forms.Label()
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonTrends = New System.Windows.Forms.Button()
-        Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
         Me.ButtonAddToCart = New System.Windows.Forms.Button()
@@ -41,6 +39,7 @@ Partial Class PedidosCliente
         Me.InventoryDataSet4 = New ProyectoDefinitivo.InventoryDataSet4()
         Me.ProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductsTableAdapter1 = New ProyectoDefinitivo.InventoryDataSet4TableAdapters.ProductsTableAdapter()
+        Me.Buttonhome = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -61,11 +60,10 @@ Partial Class PedidosCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Buttonhome)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Id_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonTrends)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonDelivery)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonBill)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonMyInventory)
         '
@@ -81,8 +79,8 @@ Partial Class PedidosCliente
         '
         Me.ButtonOrders.FlatAppearance.BorderSize = 0
         Me.ButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonOrders.Location = New System.Drawing.Point(91, 116)
+        Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonOrders.Location = New System.Drawing.Point(84, 205)
         Me.ButtonOrders.Name = "ButtonOrders"
         Me.ButtonOrders.Size = New System.Drawing.Size(165, 44)
         Me.ButtonOrders.TabIndex = 6
@@ -112,36 +110,12 @@ Partial Class PedidosCliente
         Me.ButtonShoppingCart.TabIndex = 4
         Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
-        'ButtonTrends
-        '
-        Me.ButtonTrends.FlatAppearance.BorderSize = 0
-        Me.ButtonTrends.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonTrends.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonTrends.Location = New System.Drawing.Point(91, 434)
-        Me.ButtonTrends.Name = "ButtonTrends"
-        Me.ButtonTrends.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonTrends.TabIndex = 3
-        Me.ButtonTrends.Text = "Tendencias"
-        Me.ButtonTrends.UseVisualStyleBackColor = True
-        '
-        'ButtonDelivery
-        '
-        Me.ButtonDelivery.FlatAppearance.BorderSize = 0
-        Me.ButtonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonDelivery.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonDelivery.Location = New System.Drawing.Point(91, 357)
-        Me.ButtonDelivery.Name = "ButtonDelivery"
-        Me.ButtonDelivery.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonDelivery.TabIndex = 2
-        Me.ButtonDelivery.Text = "Entregas"
-        Me.ButtonDelivery.UseVisualStyleBackColor = True
-        '
         'ButtonBill
         '
         Me.ButtonBill.FlatAppearance.BorderSize = 0
         Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(91, 278)
+        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonBill.Location = New System.Drawing.Point(84, 420)
         Me.ButtonBill.Name = "ButtonBill"
         Me.ButtonBill.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
@@ -153,8 +127,8 @@ Partial Class PedidosCliente
         '
         Me.ButtonMyInventory.FlatAppearance.BorderSize = 0
         Me.ButtonMyInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonMyInventory.Location = New System.Drawing.Point(91, 196)
+        Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonMyInventory.Location = New System.Drawing.Point(84, 310)
         Me.ButtonMyInventory.Name = "ButtonMyInventory"
         Me.ButtonMyInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonMyInventory.TabIndex = 0
@@ -176,7 +150,7 @@ Partial Class PedidosCliente
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 32)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 31)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(671, 548)
@@ -210,6 +184,18 @@ Partial Class PedidosCliente
         '
         Me.ProductsTableAdapter1.ClearBeforeFill = True
         '
+        'Buttonhome
+        '
+        Me.Buttonhome.FlatAppearance.BorderSize = 0
+        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Buttonhome.Location = New System.Drawing.Point(59, 120)
+        Me.Buttonhome.Name = "Buttonhome"
+        Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
+        Me.Buttonhome.TabIndex = 8
+        Me.Buttonhome.Text = "Pagina Principal"
+        Me.Buttonhome.UseVisualStyleBackColor = True
+        '
         'PedidosCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -221,6 +207,7 @@ Partial Class PedidosCliente
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1032, 622)
         Me.Name = "PedidosCliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pedidos"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
@@ -241,8 +228,6 @@ Partial Class PedidosCliente
     Friend WithEvents ButtonOrders As Button
     Friend WithEvents Id_Profile As Label
     Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonTrends As Button
-    Friend WithEvents ButtonDelivery As Button
     Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonMyInventory As Button
     Friend WithEvents DataGridView1 As DataGridView
@@ -253,4 +238,5 @@ Partial Class PedidosCliente
     Friend WithEvents ProductsBindingSource1 As BindingSource
     Friend WithEvents ProductsTableAdapter1 As InventoryDataSet4TableAdapters.ProductsTableAdapter
     Friend WithEvents ButtonAddToCart As Button
+    Friend WithEvents Buttonhome As Button
 End Class

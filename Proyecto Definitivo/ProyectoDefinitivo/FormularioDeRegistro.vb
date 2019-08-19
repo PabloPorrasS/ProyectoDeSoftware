@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class FormularioDeRegistro
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
     Private Sub FormularioDeRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim Connection As New SqlConnection(ConnectionString)
@@ -72,6 +72,12 @@ Public Class FormularioDeRegistro
         Command.Dispose()
         Connection.Close()
 
+        'Try
+
+
+        'Catch ex As Exception
+
+        'End Try
 
         MsgBox("Tú perfil ha sido guardado con la siguiente información" & vbCrLf & vbCrLf & "Nombre: " & CompleteName & vbCrLf & "Email: " & Email & vbCrLf & "Contraseña: " & Password & vbCrLf & "Tipo de Negocio: " & TypeOfBusiness & vbCrLf & "Ubicación del negocio: " & Ubication)
         Me.Close()

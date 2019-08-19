@@ -1,41 +1,53 @@
 ﻿Imports System.Data.SqlClient
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+
 Public Class HomeCliente
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
-    'Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
-
-    '    If LabelTypeOfUser.Text = 1 Then
-    '        InventarioCliente.Show()
-
-    '    End If
-
-    '    If LabelTypeOfUser.Text = 2 Then
-    '        InventarioAM.Show()
-
-    '    End If
-
-
-    'End Sub
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
 
     Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+        Dim Id As Integer
+
+
         Dim Connection As New SqlConnection(ConnectionString)
+
+
+        Dim commandselect As SqlCommand
+
+
         Dim SelectQuery As String
-        Dim commandSelect As New SqlCommand
-        Dim Reader As SqlDataReader
+        SelectQuery = "Select Id FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Connection.Open()
+
+        Dim reader As SqlDataReader
+        reader = commandselect.ExecuteReader()
+
+        If reader.HasRows Then
+            reader.Read()
+            Id = reader.GetInt32(0)
+
+        End If
+
+        LabelId_Profile.Text = Id
+
+        Connection.Close()
 
 
         SelectQuery = "Select * FROM Profile WHERE Email = '" & Login.TextBoxEmail.Text & "'"
-        commandSelect = New SqlCommand(SelectQuery, Connection)
+        commandselect = New SqlCommand(SelectQuery, Connection)
 
 
         Connection.Open()
-        Reader = commandSelect.ExecuteReader
+        reader = commandselect.ExecuteReader
 
 
-        While Reader.HasRows ' Has rows es mientras tenga columnas
-            Reader.Read()
+        While reader.HasRows ' Has rows es mientras tenga columnas
+            reader.Read()
 
-            LabelTypeOfUser.Text = Reader.GetInt32(6).ToString
+            LabelTypeOfUser.Text = reader.GetInt32(6).ToString
 
             Exit While
 
@@ -44,18 +56,13 @@ Public Class HomeCliente
 
     End Sub
 
-    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
-
-    End Sub
-
-
     Private Sub ButtonMyInventory_Click_1(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
         InventarioCliente.Show()
 
     End Sub
 
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
-        PedidosCliente.show
+        PedidosCliente.Show()
     End Sub
 
     Private Sub ButtonEditProfile_Click(sender As Object, e As EventArgs) Handles ButtonEditProfile.Click
@@ -65,5 +72,42 @@ Public Class HomeCliente
 
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
+        Carrito.LoadGridView()
+    End Sub
+
+    Private Sub ButtonDelivery_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+        Facturas.Show()
+
+    End Sub
+
+    Private Sub SplitContainer1_Panel2_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel2.Paint
+
+        Dim welcomeName As Integer
+
+        Dim Connection As New SqlConnection(ConnectionString)
+
+        Dim commandselect As SqlCommand
+
+        Dim SelectQuery As String
+        SelectQuery = "Select CompleteName FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Connection.Open()
+
+        Dim reader As SqlDataReader
+        reader = commandselect.ExecuteReader()
+
+        If reader.HasRows Then
+            reader.Read()
+            welcomeName = reader.GetInt32(1)
+
+        End If
+
+        LabelNameWelcome.Text = welcomeName
+
+        Connection.Close()
     End Sub
 End Class

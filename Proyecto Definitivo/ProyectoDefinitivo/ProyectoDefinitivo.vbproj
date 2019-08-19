@@ -49,12 +49,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -88,11 +92,24 @@
     <Compile Include="Carrito.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrystalReport3.vb">
+    <Compile Include="CrystalReport1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFacturas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetFacturas.vb">
+      <DependentUpon>DataSetFacturas.xsd</DependentUpon>
     </Compile>
     <Compile Include="EditarCarrito.Designer.vb">
       <DependentUpon>EditarCarrito.vb</DependentUpon>
@@ -104,6 +121,18 @@
       <DependentUpon>EditarPerfil.vb</DependentUpon>
     </Compile>
     <Compile Include="EditarPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarProductoTienda.Designer.vb">
+      <DependentUpon>EditarProductoTienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditarProductoTienda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturas.Designer.vb">
+      <DependentUpon>Facturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facturas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormularioEditarProductoBodega.Designer.vb">
@@ -150,6 +179,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InventoryDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
@@ -206,6 +240,12 @@
     <Compile Include="PedidosCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VisorFactura.Designer.vb">
+      <DependentUpon>VisorFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisorFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AgregarProductoBodega.resx">
@@ -214,15 +254,21 @@
     <EmbeddedResource Include="Carrito.resx">
       <DependentUpon>Carrito.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
+    <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarCarrito.resx">
       <DependentUpon>EditarCarrito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarPerfil.resx">
       <DependentUpon>EditarPerfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarProductoTienda.resx">
+      <DependentUpon>EditarProductoTienda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturas.resx">
+      <DependentUpon>Facturas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioEditarProductoBodega.resx">
       <DependentUpon>FormularioEditarProductoBodega.vb</DependentUpon>
@@ -257,8 +303,33 @@
     <EmbeddedResource Include="PedidosCliente.resx">
       <DependentUpon>PedidosCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VisorFactura.resx">
+      <DependentUpon>VisorFactura.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFacturas.xsc">
+      <DependentUpon>DataSetFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFacturas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetFacturas.xss">
+      <DependentUpon>DataSetFacturas.xsd</DependentUpon>
+    </None>
     <None Include="InventoryDataSet.xsc">
       <DependentUpon>InventoryDataSet.xsd</DependentUpon>
     </None>
@@ -324,6 +395,17 @@
     </None>
     <None Include="InventoryDataSet5.xss">
       <DependentUpon>InventoryDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet6.xsc">
+      <DependentUpon>InventoryDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryDataSet6.xss">
+      <DependentUpon>InventoryDataSet6.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

@@ -155,6 +155,7 @@ Partial Class FormularioDeRegistro
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(394, 489)
         Me.Name = "FormularioDeRegistro"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registrarse"
         Me.ResumeLayout(False)
         Me.PerformLayout()

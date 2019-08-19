@@ -1,6 +1,9 @@
 ﻿Imports System.Data.SqlClient
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+
 Public Class Carrito
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
     Public rowOfGridview As Integer
     Dim Name As String
     Dim Brand As String
@@ -54,7 +57,7 @@ Public Class Carrito
 
         Dim ProductsTable As New DataTable
 
-        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantity 'Cantidad', Price 'Precio unitario' FROM ShoppingCart"
+        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantiy 'Cantidad', Price 'Precio unitario' FROM ShoppingCart WHERE Id_Profile ='" & HomeCliente.LabelId_Profile.Text & "'"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(ProductsTable)
@@ -90,10 +93,12 @@ Public Class Carrito
 
     Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
         InventarioCliente.Show()
+        Me.Hide()
     End Sub
 
     Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
-
+        Facturas.Show()
+        Me.Hide()
     End Sub
 
     Private Sub ButtonAddNewProduct_Click(sender As Object, e As EventArgs) Handles ButtonConfirmPurchase.Click
@@ -101,7 +106,7 @@ Public Class Carrito
 
         Dim Id As Integer
         Id = PedidosCliente.Id_Profile.Text
-
+        Dim invoiced As Integer = 0
 
 
 
@@ -127,7 +132,7 @@ Public Class Carrito
         Dim Connection As New SqlConnection(ConnectionString)
         Dim Query As String
 
-        Query = "INSERT INTO ClientProducts (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
+        Query = "INSERT INTO ClientProducts (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price, Invoiced) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price, @Invoiced)"
 
         Dim Command As SqlCommand
         Command = New SqlCommand(Query, Connection)
@@ -142,17 +147,61 @@ Public Class Carrito
             .Parameters.AddWithValue("@Code", Code)
             .Parameters.AddWithValue("@Quantity", Quantity)
             .Parameters.AddWithValue("@Price", Price)
+            .Parameters.AddWithValue("@Invoiced", invoiced)
 
         End With
 
         Connection.Open()
         Command.ExecuteNonQuery()
         Command.Dispose()
+        Connection.Close()
 
+
+
+        Dim NewQuantityProducts As Integer
+        Dim QuantityAM As Integer
+
+        Dim commandselect As SqlCommand
+        Dim SelectQuery As String
+        SelectQuery = "Select * FROM Products WHERE Id ='" & IdProduct & "'"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Connection.Open()
+
+        Dim reader As SqlDataReader
+        reader = commandselect.ExecuteReader()
+
+        If reader.HasRows Then
+            reader.Read()
+            QuantityAM = reader.GetInt32(5)
+
+        End If
+
+
+        NewQuantityProducts = QuantityAM - Quantity
+
+
+
+        Connection.Close()
+
+
+        Query = "UPDATE Products SET Quantity=@NewQuantityProducts WHERE Id = '" & IdProduct & "'"
+
+        Command = New SqlCommand(Query, Connection)
+
+        With Command
+            .Parameters.AddWithValue("@NewQuantityProducts", NewQuantityProducts)
+
+        End With
+
+        Connection.Open()
+        Command.ExecuteNonQuery()
+        Command.Dispose()
+        Connection.Close()
 
 
         Query = "DELETE FROM ShoppingCart WHERE Id_Product ='" & IdProduct & "'"
         Command = New SqlCommand(Query, Connection)
+        Connection.Open()
         Command.ExecuteNonQuery()
         Command.Dispose()
         Connection.Close()
@@ -164,6 +213,9 @@ Public Class Carrito
 
 
 
+
+
+
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -172,5 +224,57 @@ Public Class Carrito
 
     Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
         EditarCarrito.Show()
+    End Sub
+
+    Private Sub ButtonGenerateBill_Click(sender As Object, e As EventArgs) Handles ButtonGenerateBill.Click
+
+        Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
+
+        Dim Connection As SqlConnection = New SqlConnection(ConnectionString)
+
+        Dim Command As SqlCommand = New SqlCommand("GeneralSalesReport", Connection)
+
+        Dim cryRpt As New ReportDocument
+        Dim crtableLogoninfos As New TableLogOnInfos
+        Dim crtableLogoninfo As New TableLogOnInfo
+        Dim crConnectionInfo As New ConnectionInfo
+        Dim CrTables As Tables
+        Dim CrTable As Table
+
+        cryRpt.Load("C:\Users\Pablo Porras\Source\Repos\ProyectoDeSoftware3\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
+
+        With crConnectionInfo
+            .ServerName = "PABLOPORRAS-PC"
+            .DatabaseName = "Inventory"
+            '.UserID = "sa"
+            '.Password = "123456"
+        End With
+
+        CrTables = cryRpt.Database.Tables
+        For Each CrTable In CrTables
+            crtableLogoninfo = CrTable.LogOnInfo
+            crtableLogoninfo.ConnectionInfo = crConnectionInfo
+            CrTable.ApplyLogOnInfo(crtableLogoninfo)
+        Next
+
+        VisorFactura.CrystalReportViewer1.ReportSource = cryRpt
+        VisorFactura.CrystalReportViewer1.Refresh()
+
+        VisorFactura.Show()
+
+
+
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+
+    End Sub
+
+    Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
+        PedidosCliente.Show()
+        Me.Hide()
+
+
+
     End Sub
 End Class

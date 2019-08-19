@@ -24,8 +24,6 @@ Partial Class Carrito
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Carrito))
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonTrends = New System.Windows.Forms.Button()
-        Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonInventory = New System.Windows.Forms.Button()
         Me.ButtonDeleteCart = New System.Windows.Forms.Button()
@@ -34,6 +32,7 @@ Partial Class Carrito
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.ButtonOrders = New System.Windows.Forms.Button()
+        Me.ButtonGenerateBill = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,36 +49,12 @@ Partial Class Carrito
         Me.ButtonShoppingCart.TabIndex = 30
         Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
-        'ButtonTrends
-        '
-        Me.ButtonTrends.FlatAppearance.BorderSize = 0
-        Me.ButtonTrends.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonTrends.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonTrends.Location = New System.Drawing.Point(49, 398)
-        Me.ButtonTrends.Name = "ButtonTrends"
-        Me.ButtonTrends.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonTrends.TabIndex = 29
-        Me.ButtonTrends.Text = "Tendencias"
-        Me.ButtonTrends.UseVisualStyleBackColor = True
-        '
-        'ButtonDelivery
-        '
-        Me.ButtonDelivery.FlatAppearance.BorderSize = 0
-        Me.ButtonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonDelivery.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonDelivery.Location = New System.Drawing.Point(49, 320)
-        Me.ButtonDelivery.Name = "ButtonDelivery"
-        Me.ButtonDelivery.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonDelivery.TabIndex = 28
-        Me.ButtonDelivery.Text = "Entregas"
-        Me.ButtonDelivery.UseVisualStyleBackColor = True
-        '
         'ButtonBill
         '
         Me.ButtonBill.FlatAppearance.BorderSize = 0
         Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(49, 232)
+        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonBill.Location = New System.Drawing.Point(49, 359)
         Me.ButtonBill.Name = "ButtonBill"
         Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
         Me.ButtonBill.TabIndex = 27
@@ -90,8 +65,8 @@ Partial Class Carrito
         '
         Me.ButtonInventory.FlatAppearance.BorderSize = 0
         Me.ButtonInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonInventory.Location = New System.Drawing.Point(49, 148)
+        Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonInventory.Location = New System.Drawing.Point(49, 244)
         Me.ButtonInventory.Name = "ButtonInventory"
         Me.ButtonInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonInventory.TabIndex = 26
@@ -118,9 +93,9 @@ Partial Class Carrito
         Me.ButtonConfirmPurchase.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.ButtonConfirmPurchase.Location = New System.Drawing.Point(273, 534)
         Me.ButtonConfirmPurchase.Name = "ButtonConfirmPurchase"
-        Me.ButtonConfirmPurchase.Size = New System.Drawing.Size(752, 49)
+        Me.ButtonConfirmPurchase.Size = New System.Drawing.Size(367, 49)
         Me.ButtonConfirmPurchase.TabIndex = 24
-        Me.ButtonConfirmPurchase.Text = "Confirmar compra"
+        Me.ButtonConfirmPurchase.Text = "Confirmar compra de producto"
         Me.ButtonConfirmPurchase.UseVisualStyleBackColor = False
         '
         'ButtonEdit
@@ -157,13 +132,26 @@ Partial Class Carrito
         '
         Me.ButtonOrders.FlatAppearance.BorderSize = 0
         Me.ButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonOrders.Location = New System.Drawing.Point(49, 71)
+        Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonOrders.Location = New System.Drawing.Point(49, 107)
         Me.ButtonOrders.Name = "ButtonOrders"
         Me.ButtonOrders.Size = New System.Drawing.Size(165, 44)
         Me.ButtonOrders.TabIndex = 31
         Me.ButtonOrders.Text = "Pedidos"
         Me.ButtonOrders.UseVisualStyleBackColor = True
+        '
+        'ButtonGenerateBill
+        '
+        Me.ButtonGenerateBill.BackColor = System.Drawing.Color.Salmon
+        Me.ButtonGenerateBill.FlatAppearance.BorderSize = 0
+        Me.ButtonGenerateBill.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonGenerateBill.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.ButtonGenerateBill.Location = New System.Drawing.Point(638, 534)
+        Me.ButtonGenerateBill.Name = "ButtonGenerateBill"
+        Me.ButtonGenerateBill.Size = New System.Drawing.Size(379, 49)
+        Me.ButtonGenerateBill.TabIndex = 32
+        Me.ButtonGenerateBill.Text = "Generar factura"
+        Me.ButtonGenerateBill.UseVisualStyleBackColor = False
         '
         'Carrito
         '
@@ -171,10 +159,9 @@ Partial Class Carrito
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1016, 583)
+        Me.Controls.Add(Me.ButtonGenerateBill)
         Me.Controls.Add(Me.ButtonOrders)
         Me.Controls.Add(Me.ButtonShoppingCart)
-        Me.Controls.Add(Me.ButtonTrends)
-        Me.Controls.Add(Me.ButtonDelivery)
         Me.Controls.Add(Me.ButtonBill)
         Me.Controls.Add(Me.ButtonInventory)
         Me.Controls.Add(Me.ButtonDeleteCart)
@@ -187,6 +174,7 @@ Partial Class Carrito
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1032, 622)
         Me.Name = "Carrito"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Carrito"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -194,8 +182,6 @@ Partial Class Carrito
     End Sub
 
     Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonTrends As Button
-    Friend WithEvents ButtonDelivery As Button
     Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonInventory As Button
     Friend WithEvents ButtonDeleteCart As Button
@@ -204,4 +190,5 @@ Partial Class Carrito
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents ButtonOrders As Button
+    Friend WithEvents ButtonGenerateBill As Button
 End Class

@@ -23,13 +23,9 @@ Partial Class InventarioAM
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InventarioAM))
         Me.ProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InventoryDataSet2 = New ProyectoDefinitivo.InventoryDataSet2()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
-        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonTrends = New System.Windows.Forms.Button()
-        Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonInventory = New System.Windows.Forms.Button()
         Me.ButtonAddNewProduct = New System.Windows.Forms.Button()
@@ -60,43 +56,6 @@ Partial Class InventarioAM
         Me.Splitter1.Size = New System.Drawing.Size(265, 583)
         Me.Splitter1.TabIndex = 0
         Me.Splitter1.TabStop = False
-        '
-        'ButtonShoppingCart
-        '
-        Me.ButtonShoppingCart.AllowDrop = True
-        Me.ButtonShoppingCart.BackgroundImage = CType(resources.GetObject("ButtonShoppingCart.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
-        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonShoppingCart.Location = New System.Drawing.Point(181, 534)
-        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
-        Me.ButtonShoppingCart.Size = New System.Drawing.Size(74, 37)
-        Me.ButtonShoppingCart.TabIndex = 9
-        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
-        '
-        'ButtonTrends
-        '
-        Me.ButtonTrends.FlatAppearance.BorderSize = 0
-        Me.ButtonTrends.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonTrends.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonTrends.Location = New System.Drawing.Point(52, 342)
-        Me.ButtonTrends.Name = "ButtonTrends"
-        Me.ButtonTrends.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonTrends.TabIndex = 8
-        Me.ButtonTrends.Text = "Tendencias"
-        Me.ButtonTrends.UseVisualStyleBackColor = True
-        '
-        'ButtonDelivery
-        '
-        Me.ButtonDelivery.FlatAppearance.BorderSize = 0
-        Me.ButtonDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonDelivery.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonDelivery.Location = New System.Drawing.Point(52, 259)
-        Me.ButtonDelivery.Name = "ButtonDelivery"
-        Me.ButtonDelivery.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonDelivery.TabIndex = 7
-        Me.ButtonDelivery.Text = "Entregas"
-        Me.ButtonDelivery.UseVisualStyleBackColor = True
         '
         'ButtonBill
         '
@@ -182,9 +141,6 @@ Partial Class InventarioAM
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonAddNewProduct)
-        Me.Controls.Add(Me.ButtonShoppingCart)
-        Me.Controls.Add(Me.ButtonTrends)
-        Me.Controls.Add(Me.ButtonDelivery)
         Me.Controls.Add(Me.ButtonBill)
         Me.Controls.Add(Me.ButtonInventory)
         Me.Controls.Add(Me.Splitter1)
@@ -193,6 +149,7 @@ Partial Class InventarioAM
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(1032, 622)
         Me.Name = "InventarioAM"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inventario"
         CType(Me.ProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InventoryDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -202,9 +159,6 @@ Partial Class InventarioAM
     End Sub
 
     Friend WithEvents Splitter1 As Splitter
-    Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonTrends As Button
-    Friend WithEvents ButtonDelivery As Button
     Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonInventory As Button
     Friend WithEvents ButtonAddNewProduct As Button

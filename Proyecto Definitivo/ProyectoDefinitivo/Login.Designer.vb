@@ -118,6 +118,7 @@ Partial Class Login
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(414, 356)
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ingreso"
         Me.ResumeLayout(False)
         Me.PerformLayout()

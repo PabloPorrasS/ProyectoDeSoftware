@@ -10,9 +10,9 @@ Public Class PedidosCliente
     Dim IdProduct As Integer
 
 
-    Dim rowOfGridview As Integer 'obtendra el numero de fila del gridview
+    Public rowOfGridview As Integer
 
-    Dim ConnectionString As String = "Data Source=PabloPorras-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
     Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
 
     End Sub
@@ -80,51 +80,6 @@ Public Class PedidosCliente
         NuevoProductoCliente.Show()
 
 
-        'Dim Id As Integer
-        'Id = Id_Profile.Text
-
-
-        'Dim IdProduct As Integer
-
-        'Dim conexion As String
-        'conexion = NuevoProductoCliente.TextBoxPriceNew.Text
-
-
-        'IdProduct = DataGridView1.Item(0, rowOfGridview).Value
-        'Name = DataGridView1.Item(1, rowOfGridview).Value.ToString
-        'Brand = DataGridView1.Item(2, rowOfGridview).Value.ToString
-        'Category = DataGridView1.Item(3, rowOfGridview).Value.ToString
-        'Code = DataGridView1.Item(4, rowOfGridview).Value
-        'Quantity = NuevoProductoCliente.NumericUpDownQuantityClient.Value
-        'Price = Integer.Parse(conexion)
-        'Dim Connection As New SqlConnection(ConnectionString)
-        'Dim Query As String
-
-        'Query = "INSERT INTO ShoppingCart (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantity, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
-
-        'Dim Command As SqlCommand
-        'Command = New SqlCommand(Query, Connection)
-
-        'With Command
-
-        '    .Parameters.AddWithValue("@Id_Product", IdProduct)
-        '    .Parameters.AddWithValue("@Id", Id)
-        '    .Parameters.AddWithValue("@Name", Name)
-        '    .Parameters.AddWithValue("@Brand", Brand)
-        '    .Parameters.AddWithValue("@Category", Category)
-        '    .Parameters.AddWithValue("@Code", Code)
-        '    .Parameters.AddWithValue("@Quantity", Quantity)
-        '    .Parameters.AddWithValue("@Price", Price)
-
-        'End With
-
-        'Connection.Open()
-        'Command.ExecuteNonQuery()
-        'Command.Dispose()
-        'Connection.Close()
-
-
-
 
     End Sub
 
@@ -144,5 +99,31 @@ Public Class PedidosCliente
 
 
 
+    End Sub
+
+    Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
+        InventarioCliente.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+        Facturas.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
+
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+        Carrito.Show()
+        Me.Hide()
+        Carrito.LoadGridView()
+
+    End Sub
+
+    Private Sub Buttonhome_Click(sender As Object, e As EventArgs) Handles Buttonhome.Click
+        HomeCliente.Show()
+        Me.Hide()
     End Sub
 End Class

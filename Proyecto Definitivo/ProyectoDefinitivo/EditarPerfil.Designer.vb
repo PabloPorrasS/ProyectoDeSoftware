@@ -29,8 +29,6 @@ Partial Class EditarPerfil
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxCompleteName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelIdProfile = New System.Windows.Forms.Label()
@@ -39,7 +37,7 @@ Partial Class EditarPerfil
         'ComboBoxTypeOfBusiness
         '
         Me.ComboBoxTypeOfBusiness.FormattingEnabled = True
-        Me.ComboBoxTypeOfBusiness.Location = New System.Drawing.Point(227, 214)
+        Me.ComboBoxTypeOfBusiness.Location = New System.Drawing.Point(230, 195)
         Me.ComboBoxTypeOfBusiness.Name = "ComboBoxTypeOfBusiness"
         Me.ComboBoxTypeOfBusiness.Size = New System.Drawing.Size(121, 21)
         Me.ComboBoxTypeOfBusiness.TabIndex = 22
@@ -57,7 +55,7 @@ Partial Class EditarPerfil
         '
         'TextBoxUbication
         '
-        Me.TextBoxUbication.Location = New System.Drawing.Point(227, 280)
+        Me.TextBoxUbication.Location = New System.Drawing.Point(230, 261)
         Me.TextBoxUbication.Name = "TextBoxUbication"
         Me.TextBoxUbication.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxUbication.TabIndex = 20
@@ -66,7 +64,7 @@ Partial Class EditarPerfil
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(50, 280)
+        Me.Label5.Location = New System.Drawing.Point(53, 261)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(137, 20)
         Me.Label5.TabIndex = 19
@@ -76,7 +74,7 @@ Partial Class EditarPerfil
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(50, 215)
+        Me.Label4.Location = New System.Drawing.Point(53, 196)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(108, 20)
         Me.Label4.TabIndex = 18
@@ -84,7 +82,7 @@ Partial Class EditarPerfil
         '
         'TextBoxPassword
         '
-        Me.TextBoxPassword.Location = New System.Drawing.Point(227, 154)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(230, 135)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxPassword.TabIndex = 17
@@ -93,32 +91,15 @@ Partial Class EditarPerfil
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(50, 154)
+        Me.Label3.Location = New System.Drawing.Point(53, 135)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 20)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Contraseña"
         '
-        'TextBoxEmail
-        '
-        Me.TextBoxEmail.Location = New System.Drawing.Point(227, 98)
-        Me.TextBoxEmail.Name = "TextBoxEmail"
-        Me.TextBoxEmail.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxEmail.TabIndex = 15
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(50, 98)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 20)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Correo"
-        '
         'TextBoxCompleteName
         '
-        Me.TextBoxCompleteName.Location = New System.Drawing.Point(227, 42)
+        Me.TextBoxCompleteName.Location = New System.Drawing.Point(230, 78)
         Me.TextBoxCompleteName.Name = "TextBoxCompleteName"
         Me.TextBoxCompleteName.Size = New System.Drawing.Size(100, 20)
         Me.TextBoxCompleteName.TabIndex = 13
@@ -127,7 +108,7 @@ Partial Class EditarPerfil
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(50, 42)
+        Me.Label1.Location = New System.Drawing.Point(53, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(117, 20)
         Me.Label1.TabIndex = 12
@@ -157,8 +138,6 @@ Partial Class EditarPerfil
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBoxPassword)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBoxEmail)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBoxCompleteName)
         Me.Controls.Add(Me.Label1)
         Me.MaximizeBox = False
@@ -166,6 +145,7 @@ Partial Class EditarPerfil
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(394, 489)
         Me.Name = "EditarPerfil"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditarPerfil"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -179,8 +159,6 @@ Partial Class EditarPerfil
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBoxEmail As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents TextBoxCompleteName As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LabelIdProfile As Label
