@@ -55,7 +55,7 @@ Public Class EditarPerfil
 
             reader.Read()
             LabelIdProfile.Text = reader.GetInt32(0).ToString
-            Name = Reader.GetString(1)
+            Name = reader.GetString(1)
 
             Password = reader.GetString(5)
             TypeOfBussiness = reader.GetInt32(6)
@@ -135,4 +135,5 @@ Public Class EditarPerfil
             e.Handled = False
         Else e.Handled = True
         End If
-    End Sub 
+    End Sub
+End Class
