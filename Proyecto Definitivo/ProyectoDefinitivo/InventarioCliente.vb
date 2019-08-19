@@ -128,14 +128,11 @@ Public Class InventarioCliente
 
     End Sub
 
-    Private Sub ButtonShoppingCart_Click_1(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
-        Carrito.Show()
-        Me.Hide()
-        Carrito.LoadGridView()
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Carrito.Show()
+        Me.Hide()
+        Carrito.LoadGridView()
     End Sub
 End Class
 
