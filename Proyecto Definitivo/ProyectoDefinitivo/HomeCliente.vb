@@ -83,4 +83,31 @@ Public Class HomeCliente
         Facturas.Show()
 
     End Sub
+
+    Private Sub SplitContainer1_Panel2_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel2.Paint
+
+        Dim welcomeName As Integer
+
+        Dim Connection As New SqlConnection(ConnectionString)
+
+        Dim commandselect As SqlCommand
+
+        Dim SelectQuery As String
+        SelectQuery = "Select CompleteName FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
+        commandselect = New SqlCommand(SelectQuery, Connection)
+        Connection.Open()
+
+        Dim reader As SqlDataReader
+        reader = commandselect.ExecuteReader()
+
+        If reader.HasRows Then
+            reader.Read()
+            welcomeName = reader.GetInt32(1)
+
+        End If
+
+        LabelNameWelcome.Text = welcomeName
+
+        Connection.Close()
+    End Sub
 End Class

@@ -31,9 +31,14 @@ Partial Class HomeCliente
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LabelWelcome = New System.Windows.Forms.Label()
+        Me.LabelNameWelcome = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -52,6 +57,12 @@ Partial Class HomeCliente
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonBill)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonMyInventory)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.LabelNameWelcome)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.LabelWelcome)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.PictureBox1)
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 0
@@ -140,6 +151,38 @@ Partial Class HomeCliente
         Me.ButtonMyInventory.Text = "Mi inventario"
         Me.ButtonMyInventory.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(182, 222)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(337, 244)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'LabelWelcome
+        '
+        Me.LabelWelcome.AutoSize = True
+        Me.LabelWelcome.Font = New System.Drawing.Font("Elephant", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelWelcome.ForeColor = System.Drawing.Color.Green
+        Me.LabelWelcome.Location = New System.Drawing.Point(171, 27)
+        Me.LabelWelcome.Name = "LabelWelcome"
+        Me.LabelWelcome.Size = New System.Drawing.Size(317, 62)
+        Me.LabelWelcome.TabIndex = 1
+        Me.LabelWelcome.Text = "Bienvenido "
+        Me.LabelWelcome.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LabelNameWelcome
+        '
+        Me.LabelNameWelcome.AutoSize = True
+        Me.LabelNameWelcome.Font = New System.Drawing.Font("Elephant", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNameWelcome.ForeColor = System.Drawing.Color.Green
+        Me.LabelNameWelcome.Location = New System.Drawing.Point(183, 125)
+        Me.LabelNameWelcome.Name = "LabelNameWelcome"
+        Me.LabelNameWelcome.Size = New System.Drawing.Size(239, 27)
+        Me.LabelNameWelcome.TabIndex = 2
+        Me.LabelNameWelcome.Text = "oihdsfkgfsdkugsdfkjgf"
+        '
         'HomeCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -155,8 +198,11 @@ Partial Class HomeCliente
         Me.Text = "Home"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -169,4 +215,7 @@ Partial Class HomeCliente
     Friend WithEvents ButtonOrders As Button
     Friend WithEvents ButtonEditProfile As Button
     Friend WithEvents LabelId_Profile As Label
+    Friend WithEvents LabelWelcome As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents LabelNameWelcome As Label
 End Class
