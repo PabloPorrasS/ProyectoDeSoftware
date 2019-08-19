@@ -96,7 +96,7 @@ Public Class Carrito
         Me.Hide()
     End Sub
 
-    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs)
         Facturas.Show()
         Me.Hide()
     End Sub
@@ -266,7 +266,7 @@ Public Class Carrito
 
     End Sub
 
-    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -275,6 +275,10 @@ Public Class Carrito
         Me.Hide()
 
 
+
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click_1(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
 
     End Sub
 End Class

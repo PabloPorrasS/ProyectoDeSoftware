@@ -34,7 +34,7 @@ Public Class HomeAM
         Connection.Close()
     End Sub
 
-    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) 
 
     End Sub
 

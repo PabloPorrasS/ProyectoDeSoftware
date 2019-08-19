@@ -24,7 +24,6 @@ Partial Class HomeAM
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeAM))
         Me.Splitter1 = New System.Windows.Forms.Splitter()
-        Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonInventory = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LabelWelcomeAM = New System.Windows.Forms.Label()
@@ -41,27 +40,13 @@ Partial Class HomeAM
         Me.Splitter1.TabIndex = 10
         Me.Splitter1.TabStop = False
         '
-        'ButtonBill
-        '
-        Me.ButtonBill.BackColor = System.Drawing.Color.Green
-        Me.ButtonBill.FlatAppearance.BorderSize = 0
-        Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(62, 159)
-        Me.ButtonBill.Name = "ButtonBill"
-        Me.ButtonBill.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonBill.TabIndex = 12
-        Me.ButtonBill.Text = "Facturas"
-        Me.ButtonBill.UseVisualStyleBackColor = False
-        '
         'ButtonInventory
         '
         Me.ButtonInventory.BackColor = System.Drawing.Color.Green
         Me.ButtonInventory.FlatAppearance.BorderSize = 0
         Me.ButtonInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonInventory.Location = New System.Drawing.Point(62, 89)
+        Me.ButtonInventory.Location = New System.Drawing.Point(55, 142)
         Me.ButtonInventory.Name = "ButtonInventory"
         Me.ButtonInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonInventory.TabIndex = 11
@@ -109,7 +94,6 @@ Partial Class HomeAM
         Me.Controls.Add(Me.LabelNameWelcomeAM)
         Me.Controls.Add(Me.LabelWelcomeAM)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ButtonBill)
         Me.Controls.Add(Me.ButtonInventory)
         Me.Controls.Add(Me.Splitter1)
         Me.MaximizeBox = False
@@ -126,7 +110,6 @@ Partial Class HomeAM
     End Sub
 
     Friend WithEvents Splitter1 As Splitter
-    Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonInventory As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LabelWelcomeAM As Label

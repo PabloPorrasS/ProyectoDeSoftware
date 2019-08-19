@@ -26,7 +26,6 @@ Partial Class InventarioAM
         Me.ProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InventoryDataSet2 = New ProyectoDefinitivo.InventoryDataSet2()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
-        Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonInventory = New System.Windows.Forms.Button()
         Me.ButtonAddNewProduct = New System.Windows.Forms.Button()
         Me.ProductsTableAdapter = New ProyectoDefinitivo.InventoryDataSet2TableAdapters.ProductsTableAdapter()
@@ -56,18 +55,6 @@ Partial Class InventarioAM
         Me.Splitter1.Size = New System.Drawing.Size(265, 583)
         Me.Splitter1.TabIndex = 0
         Me.Splitter1.TabStop = False
-        '
-        'ButtonBill
-        '
-        Me.ButtonBill.FlatAppearance.BorderSize = 0
-        Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(52, 180)
-        Me.ButtonBill.Name = "ButtonBill"
-        Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonBill.TabIndex = 6
-        Me.ButtonBill.Text = "Facturas"
-        Me.ButtonBill.UseVisualStyleBackColor = True
         '
         'ButtonInventory
         '
@@ -141,7 +128,6 @@ Partial Class InventarioAM
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.ButtonAddNewProduct)
-        Me.Controls.Add(Me.ButtonBill)
         Me.Controls.Add(Me.ButtonInventory)
         Me.Controls.Add(Me.Splitter1)
         Me.MaximizeBox = False
@@ -159,7 +145,6 @@ Partial Class InventarioAM
     End Sub
 
     Friend WithEvents Splitter1 As Splitter
-    Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonInventory As Button
     Friend WithEvents ButtonAddNewProduct As Button
     Friend WithEvents InventoryDataSet2 As InventoryDataSet2

@@ -23,13 +23,11 @@ Partial Class PedidosCliente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PedidosCliente))
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Buttonhome = New System.Windows.Forms.Button()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.Id_Profile = New System.Windows.Forms.Label()
-        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
         Me.ButtonAddToCart = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -39,7 +37,7 @@ Partial Class PedidosCliente
         Me.InventoryDataSet4 = New ProyectoDefinitivo.InventoryDataSet4()
         Me.ProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductsTableAdapter1 = New ProyectoDefinitivo.InventoryDataSet4TableAdapters.ProductsTableAdapter()
-        Me.Buttonhome = New System.Windows.Forms.Button()
+        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -60,11 +58,10 @@ Partial Class PedidosCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Buttonhome)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Id_Profile)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonBill)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonMyInventory)
         '
         'SplitContainer1.Panel2
@@ -74,6 +71,18 @@ Partial Class PedidosCliente
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 1
+        '
+        'Buttonhome
+        '
+        Me.Buttonhome.FlatAppearance.BorderSize = 0
+        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Buttonhome.Location = New System.Drawing.Point(59, 120)
+        Me.Buttonhome.Name = "Buttonhome"
+        Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
+        Me.Buttonhome.TabIndex = 8
+        Me.Buttonhome.Text = "Pagina Principal"
+        Me.Buttonhome.UseVisualStyleBackColor = True
         '
         'ButtonOrders
         '
@@ -96,32 +105,6 @@ Partial Class PedidosCliente
         Me.Id_Profile.TabIndex = 5
         Me.Id_Profile.Text = "Label1"
         Me.Id_Profile.Visible = False
-        '
-        'ButtonShoppingCart
-        '
-        Me.ButtonShoppingCart.AllowDrop = True
-        Me.ButtonShoppingCart.BackgroundImage = CType(resources.GetObject("ButtonShoppingCart.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
-        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonShoppingCart.Location = New System.Drawing.Point(256, 542)
-        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
-        Me.ButtonShoppingCart.Size = New System.Drawing.Size(74, 37)
-        Me.ButtonShoppingCart.TabIndex = 4
-        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
-        '
-        'ButtonBill
-        '
-        Me.ButtonBill.FlatAppearance.BorderSize = 0
-        Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(84, 420)
-        Me.ButtonBill.Name = "ButtonBill"
-        Me.ButtonBill.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonBill.TabIndex = 1
-        Me.ButtonBill.Text = "Facturas"
-        Me.ButtonBill.UseVisualStyleBackColor = True
         '
         'ButtonMyInventory
         '
@@ -184,17 +167,17 @@ Partial Class PedidosCliente
         '
         Me.ProductsTableAdapter1.ClearBeforeFill = True
         '
-        'Buttonhome
+        'ButtonShoppingCart
         '
-        Me.Buttonhome.FlatAppearance.BorderSize = 0
-        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Buttonhome.Location = New System.Drawing.Point(59, 120)
-        Me.Buttonhome.Name = "Buttonhome"
-        Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
-        Me.Buttonhome.TabIndex = 8
-        Me.Buttonhome.Text = "Pagina Principal"
-        Me.Buttonhome.UseVisualStyleBackColor = True
+        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
+        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonShoppingCart.Location = New System.Drawing.Point(59, 413)
+        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
+        Me.ButtonShoppingCart.Size = New System.Drawing.Size(221, 44)
+        Me.ButtonShoppingCart.TabIndex = 9
+        Me.ButtonShoppingCart.Text = "Carrito de compras"
+        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
         'PedidosCliente
         '
@@ -227,8 +210,6 @@ Partial Class PedidosCliente
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents ButtonOrders As Button
     Friend WithEvents Id_Profile As Label
-    Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonMyInventory As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents InventoryDataSet3 As InventoryDataSet3
@@ -239,4 +220,5 @@ Partial Class PedidosCliente
     Friend WithEvents ProductsTableAdapter1 As InventoryDataSet4TableAdapters.ProductsTableAdapter
     Friend WithEvents ButtonAddToCart As Button
     Friend WithEvents Buttonhome As Button
+    Friend WithEvents ButtonShoppingCart As Button
 End Class

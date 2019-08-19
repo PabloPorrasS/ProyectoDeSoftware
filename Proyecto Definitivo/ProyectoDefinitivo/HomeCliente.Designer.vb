@@ -25,15 +25,14 @@ Partial Class HomeCliente
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.LabelId_Profile = New System.Windows.Forms.Label()
-        Me.ButtonEditProfile = New System.Windows.Forms.Button()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.LabelTypeOfUser = New System.Windows.Forms.Label()
-        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.LabelWelcome = New System.Windows.Forms.Label()
         Me.LabelNameWelcome = New System.Windows.Forms.Label()
+        Me.LabelWelcome = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
+        Me.ButtonEditProfile = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -50,12 +49,11 @@ Partial Class HomeCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
-        Me.SplitContainer1.Panel1.Controls.Add(Me.LabelId_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonEditProfile)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.LabelId_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
         Me.SplitContainer1.Panel1.Controls.Add(Me.LabelTypeOfUser)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonBill)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonMyInventory)
         '
         'SplitContainer1.Panel2
@@ -76,20 +74,6 @@ Partial Class HomeCliente
         Me.LabelId_Profile.TabIndex = 8
         Me.LabelId_Profile.Text = "Label1"
         Me.LabelId_Profile.Visible = False
-        '
-        'ButtonEditProfile
-        '
-        Me.ButtonEditProfile.AllowDrop = True
-        Me.ButtonEditProfile.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ButtonEditProfile.FlatAppearance.BorderSize = 0
-        Me.ButtonEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonEditProfile.Font = New System.Drawing.Font("Arial Narrow", 12.0!)
-        Me.ButtonEditProfile.Location = New System.Drawing.Point(217, 3)
-        Me.ButtonEditProfile.Name = "ButtonEditProfile"
-        Me.ButtonEditProfile.Size = New System.Drawing.Size(118, 37)
-        Me.ButtonEditProfile.TabIndex = 7
-        Me.ButtonEditProfile.Text = "Editar Perfil"
-        Me.ButtonEditProfile.UseVisualStyleBackColor = False
         '
         'ButtonOrders
         '
@@ -113,52 +97,28 @@ Partial Class HomeCliente
         Me.LabelTypeOfUser.Text = "Label1"
         Me.LabelTypeOfUser.Visible = False
         '
-        'ButtonShoppingCart
-        '
-        Me.ButtonShoppingCart.AllowDrop = True
-        Me.ButtonShoppingCart.BackgroundImage = CType(resources.GetObject("ButtonShoppingCart.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
-        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonShoppingCart.Location = New System.Drawing.Point(256, 542)
-        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
-        Me.ButtonShoppingCart.Size = New System.Drawing.Size(74, 37)
-        Me.ButtonShoppingCart.TabIndex = 4
-        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
-        '
-        'ButtonBill
-        '
-        Me.ButtonBill.FlatAppearance.BorderSize = 0
-        Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(91, 394)
-        Me.ButtonBill.Name = "ButtonBill"
-        Me.ButtonBill.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonBill.TabIndex = 1
-        Me.ButtonBill.Text = "Facturas"
-        Me.ButtonBill.UseVisualStyleBackColor = True
-        '
         'ButtonMyInventory
         '
         Me.ButtonMyInventory.FlatAppearance.BorderSize = 0
         Me.ButtonMyInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonMyInventory.Location = New System.Drawing.Point(91, 262)
+        Me.ButtonMyInventory.Location = New System.Drawing.Point(91, 234)
         Me.ButtonMyInventory.Name = "ButtonMyInventory"
         Me.ButtonMyInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonMyInventory.TabIndex = 0
         Me.ButtonMyInventory.Text = "Mi inventario"
         Me.ButtonMyInventory.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'LabelNameWelcome
         '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(182, 222)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(337, 244)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.LabelNameWelcome.AutoSize = True
+        Me.LabelNameWelcome.Font = New System.Drawing.Font("Elephant", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNameWelcome.ForeColor = System.Drawing.Color.Green
+        Me.LabelNameWelcome.Location = New System.Drawing.Point(183, 125)
+        Me.LabelNameWelcome.Name = "LabelNameWelcome"
+        Me.LabelNameWelcome.Size = New System.Drawing.Size(239, 27)
+        Me.LabelNameWelcome.TabIndex = 2
+        Me.LabelNameWelcome.Text = "oihdsfkgfsdkugsdfkjgf"
         '
         'LabelWelcome
         '
@@ -172,16 +132,38 @@ Partial Class HomeCliente
         Me.LabelWelcome.Text = "Bienvenido "
         Me.LabelWelcome.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'LabelNameWelcome
+        'PictureBox1
         '
-        Me.LabelNameWelcome.AutoSize = True
-        Me.LabelNameWelcome.Font = New System.Drawing.Font("Elephant", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelNameWelcome.ForeColor = System.Drawing.Color.Green
-        Me.LabelNameWelcome.Location = New System.Drawing.Point(183, 125)
-        Me.LabelNameWelcome.Name = "LabelNameWelcome"
-        Me.LabelNameWelcome.Size = New System.Drawing.Size(239, 27)
-        Me.LabelNameWelcome.TabIndex = 2
-        Me.LabelNameWelcome.Text = "oihdsfkgfsdkugsdfkjgf"
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(182, 222)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(337, 244)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'ButtonShoppingCart
+        '
+        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
+        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonShoppingCart.Location = New System.Drawing.Point(61, 337)
+        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
+        Me.ButtonShoppingCart.Size = New System.Drawing.Size(219, 44)
+        Me.ButtonShoppingCart.TabIndex = 9
+        Me.ButtonShoppingCart.Text = "Carrito de compras"
+        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
+        '
+        'ButtonEditProfile
+        '
+        Me.ButtonEditProfile.FlatAppearance.BorderSize = 0
+        Me.ButtonEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonEditProfile.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonEditProfile.Location = New System.Drawing.Point(61, 451)
+        Me.ButtonEditProfile.Name = "ButtonEditProfile"
+        Me.ButtonEditProfile.Size = New System.Drawing.Size(219, 44)
+        Me.ButtonEditProfile.TabIndex = 10
+        Me.ButtonEditProfile.Text = "Editar Perfil"
+        Me.ButtonEditProfile.UseVisualStyleBackColor = True
         '
         'HomeCliente
         '
@@ -208,14 +190,13 @@ Partial Class HomeCliente
     End Sub
 
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonBill As Button
     Friend WithEvents LabelTypeOfUser As Label
     Friend WithEvents ButtonMyInventory As Button
     Friend WithEvents ButtonOrders As Button
-    Friend WithEvents ButtonEditProfile As Button
     Friend WithEvents LabelId_Profile As Label
     Friend WithEvents LabelWelcome As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LabelNameWelcome As Label
+    Friend WithEvents ButtonShoppingCart As Button
+    Friend WithEvents ButtonEditProfile As Button
 End Class

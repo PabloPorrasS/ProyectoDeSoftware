@@ -9,7 +9,6 @@ Public Class PedidosCliente
     Dim Price As Integer
     Dim IdProduct As Integer
 
-
     Public rowOfGridview As Integer
 
     Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
@@ -25,20 +24,15 @@ Public Class PedidosCliente
 
         LoadGridView()
 
-
     End Sub
-
 
     Sub LoadGridView()
 
         Dim Id As Integer
 
-
         Dim Connection As New SqlConnection(ConnectionString)
 
-
         Dim commandselect As SqlCommand
-
 
         Dim SelectQuery As String
         SelectQuery = "Select Id FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
@@ -58,9 +52,6 @@ Public Class PedidosCliente
 
         Connection.Close()
 
-
-
-
         Dim ProductsTable As New DataTable
 
         SelectQuery = "SELECT Id 'Id', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantity 'Cantidad', Price 'Precio' FROM Products"
@@ -71,33 +62,17 @@ Public Class PedidosCliente
 
         DataGridView1.Columns(0).Visible = False
 
-
-
     End Sub
 
     Private Sub ButtonAddToCart_Click(sender As Object, e As EventArgs) Handles ButtonAddToCart.Click
 
         NuevoProductoCliente.Show()
 
-
-
     End Sub
-
-
-
-
-
-
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-
-
         rowOfGridview = DataGridView1.CurrentRow.Index
-
-
-
-
 
     End Sub
 
@@ -106,7 +81,7 @@ Public Class PedidosCliente
         Me.Hide()
     End Sub
 
-    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs)
         Facturas.Show()
         Me.Hide()
     End Sub
@@ -115,15 +90,15 @@ Public Class PedidosCliente
 
     End Sub
 
-    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+    Private Sub Buttonhome_Click(sender As Object, e As EventArgs) Handles Buttonhome.Click
+        HomeCliente.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click_1(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
         Carrito.Show()
         Me.Hide()
         Carrito.LoadGridView()
 
-    End Sub
-
-    Private Sub Buttonhome_Click(sender As Object, e As EventArgs) Handles Buttonhome.Click
-        HomeCliente.Show()
-        Me.Hide()
     End Sub
 End Class

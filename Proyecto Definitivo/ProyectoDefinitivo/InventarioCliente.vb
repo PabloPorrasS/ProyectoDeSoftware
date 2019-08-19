@@ -87,7 +87,7 @@ Public Class InventarioCliente
 
     End Sub
 
-    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs)
         Facturas.Show()
         Me.Close()
     End Sub
@@ -97,11 +97,6 @@ Public Class InventarioCliente
         Me.Close()
     End Sub
 
-    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
-        Carrito.Show()
-        Me.Hide()
-        Carrito.LoadGridView()
-    End Sub
 
     Private Sub InventarioCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -131,6 +126,12 @@ Public Class InventarioCliente
         HomeCliente.Show()
         Me.Hide()
 
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click_1(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+        Carrito.Show()
+        Me.Hide()
+        Carrito.LoadGridView()
     End Sub
 End Class
 

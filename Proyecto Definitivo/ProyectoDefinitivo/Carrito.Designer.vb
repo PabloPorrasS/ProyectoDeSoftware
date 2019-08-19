@@ -22,9 +22,6 @@ Partial Class Carrito
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Carrito))
-        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonInventory = New System.Windows.Forms.Button()
         Me.ButtonDeleteCart = New System.Windows.Forms.Button()
         Me.ButtonConfirmPurchase = New System.Windows.Forms.Button()
@@ -33,33 +30,9 @@ Partial Class Carrito
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.ButtonGenerateBill = New System.Windows.Forms.Button()
+        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ButtonShoppingCart
-        '
-        Me.ButtonShoppingCart.AllowDrop = True
-        Me.ButtonShoppingCart.BackgroundImage = CType(resources.GetObject("ButtonShoppingCart.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
-        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
-        Me.ButtonShoppingCart.Location = New System.Drawing.Point(193, 534)
-        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
-        Me.ButtonShoppingCart.Size = New System.Drawing.Size(74, 37)
-        Me.ButtonShoppingCart.TabIndex = 30
-        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
-        '
-        'ButtonBill
-        '
-        Me.ButtonBill.FlatAppearance.BorderSize = 0
-        Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(49, 359)
-        Me.ButtonBill.Name = "ButtonBill"
-        Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonBill.TabIndex = 27
-        Me.ButtonBill.Text = "Facturas"
-        Me.ButtonBill.UseVisualStyleBackColor = True
         '
         'ButtonInventory
         '
@@ -133,7 +106,7 @@ Partial Class Carrito
         Me.ButtonOrders.FlatAppearance.BorderSize = 0
         Me.ButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonOrders.Location = New System.Drawing.Point(49, 107)
+        Me.ButtonOrders.Location = New System.Drawing.Point(49, 126)
         Me.ButtonOrders.Name = "ButtonOrders"
         Me.ButtonOrders.Size = New System.Drawing.Size(165, 44)
         Me.ButtonOrders.TabIndex = 31
@@ -153,16 +126,27 @@ Partial Class Carrito
         Me.ButtonGenerateBill.Text = "Generar factura"
         Me.ButtonGenerateBill.UseVisualStyleBackColor = False
         '
+        'ButtonShoppingCart
+        '
+        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
+        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonShoppingCart.Location = New System.Drawing.Point(32, 368)
+        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
+        Me.ButtonShoppingCart.Size = New System.Drawing.Size(218, 44)
+        Me.ButtonShoppingCart.TabIndex = 33
+        Me.ButtonShoppingCart.Text = "Carrito de compras"
+        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
+        '
         'Carrito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(1016, 583)
+        Me.Controls.Add(Me.ButtonShoppingCart)
         Me.Controls.Add(Me.ButtonGenerateBill)
         Me.Controls.Add(Me.ButtonOrders)
-        Me.Controls.Add(Me.ButtonShoppingCart)
-        Me.Controls.Add(Me.ButtonBill)
         Me.Controls.Add(Me.ButtonInventory)
         Me.Controls.Add(Me.ButtonDeleteCart)
         Me.Controls.Add(Me.ButtonConfirmPurchase)
@@ -180,9 +164,6 @@ Partial Class Carrito
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonInventory As Button
     Friend WithEvents ButtonDeleteCart As Button
     Friend WithEvents ButtonConfirmPurchase As Button
@@ -191,4 +172,5 @@ Partial Class Carrito
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents ButtonOrders As Button
     Friend WithEvents ButtonGenerateBill As Button
+    Friend WithEvents ButtonShoppingCart As Button
 End Class

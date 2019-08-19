@@ -65,21 +65,12 @@ Public Class HomeCliente
         PedidosCliente.Show()
     End Sub
 
-    Private Sub ButtonEditProfile_Click(sender As Object, e As EventArgs) Handles ButtonEditProfile.Click
-        EditarPerfil.Show()
-
-    End Sub
-
-    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
-        Carrito.Show()
-        Carrito.LoadGridView()
-    End Sub
 
     Private Sub ButtonDelivery_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs)
         Facturas.Show()
 
     End Sub
@@ -109,5 +100,14 @@ Public Class HomeCliente
         LabelNameWelcome.Text = welcomeName
 
         Connection.Close()
+    End Sub
+
+    Private Sub ButtonEditProfile_Click_1(sender As Object, e As EventArgs) Handles ButtonEditProfile.Click
+        EditarPerfil.Show()
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click_1(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+        Carrito.Show()
+        Carrito.LoadGridView()
     End Sub
 End Class
