@@ -25,6 +25,7 @@ Partial Class PedidosCliente
         Me.components = New System.ComponentModel.Container()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
         Me.Buttonhome = New System.Windows.Forms.Button()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.Id_Profile = New System.Windows.Forms.Label()
@@ -37,7 +38,6 @@ Partial Class PedidosCliente
         Me.InventoryDataSet4 = New ProyectoDefinitivo.InventoryDataSet4()
         Me.ProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductsTableAdapter1 = New ProyectoDefinitivo.InventoryDataSet4TableAdapters.ProductsTableAdapter()
-        Me.ButtonShoppingCart = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -71,6 +71,18 @@ Partial Class PedidosCliente
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 1
+        '
+        'ButtonShoppingCart
+        '
+        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
+        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonShoppingCart.Location = New System.Drawing.Point(59, 413)
+        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
+        Me.ButtonShoppingCart.Size = New System.Drawing.Size(221, 44)
+        Me.ButtonShoppingCart.TabIndex = 9
+        Me.ButtonShoppingCart.Text = "Carrito de compras"
+        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
         'Buttonhome
         '
@@ -123,7 +135,7 @@ Partial Class PedidosCliente
         Me.ButtonAddToCart.BackColor = System.Drawing.Color.LightGreen
         Me.ButtonAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAddToCart.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonAddToCart.Location = New System.Drawing.Point(2, 0)
+        Me.ButtonAddToCart.Location = New System.Drawing.Point(-1, 0)
         Me.ButtonAddToCart.Name = "ButtonAddToCart"
         Me.ButtonAddToCart.Size = New System.Drawing.Size(672, 34)
         Me.ButtonAddToCart.TabIndex = 7
@@ -166,18 +178,6 @@ Partial Class PedidosCliente
         'ProductsTableAdapter1
         '
         Me.ProductsTableAdapter1.ClearBeforeFill = True
-        '
-        'ButtonShoppingCart
-        '
-        Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
-        Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonShoppingCart.Location = New System.Drawing.Point(59, 413)
-        Me.ButtonShoppingCart.Name = "ButtonShoppingCart"
-        Me.ButtonShoppingCart.Size = New System.Drawing.Size(221, 44)
-        Me.ButtonShoppingCart.TabIndex = 9
-        Me.ButtonShoppingCart.Text = "Carrito de compras"
-        Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
         'PedidosCliente
         '
