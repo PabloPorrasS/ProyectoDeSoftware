@@ -72,7 +72,7 @@ Public Class Facturas
 
     End Sub
 
-    Private Sub ButtonBill_Click(sender As Object, e As EventArgs) Handles ButtonBill.Click
+    Private Sub ButtonBill_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -82,14 +82,15 @@ Public Class Facturas
 
     End Sub
 
-    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
-        Carrito.Show()
-        Me.Hide()
-    End Sub
 
     Private Sub Buttonhome_Click(sender As Object, e As EventArgs) Handles Buttonhome.Click
         HomeCliente.Show()
         Me.Close()
 
+    End Sub
+
+    Private Sub ButtonShoppingCart_Click_1(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
+        Carrito.Show()
+        Me.Hide()
     End Sub
 End Class

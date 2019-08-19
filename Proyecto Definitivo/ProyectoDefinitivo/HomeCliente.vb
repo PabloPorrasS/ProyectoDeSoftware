@@ -102,7 +102,7 @@ Public Class HomeCliente
         Connection.Close()
     End Sub
 
-    Private Sub ButtonEditProfile_Click_1(sender As Object, e As EventArgs) Handles ButtonEditProfile.Click
+    Private Sub ButtonEditProfile_Click_1(sender As Object, e As EventArgs) 
         EditarPerfil.Show()
     End Sub
 

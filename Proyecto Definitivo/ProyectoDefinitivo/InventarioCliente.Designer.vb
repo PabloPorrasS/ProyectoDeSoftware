@@ -23,13 +23,11 @@ Partial Class InventarioCliente
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InventarioCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Buttonhome = New System.Windows.Forms.Button()
         Me.Id_Profile = New System.Windows.Forms.Label()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
-        Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
         Me.ButtonDeleteProduct = New System.Windows.Forms.Button()
         Me.ButtonEdit = New System.Windows.Forms.Button()
@@ -70,7 +68,6 @@ Partial Class InventarioCliente
         Me.SplitContainer1.Panel1.Controls.Add(Me.Id_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonShoppingCart)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonBill)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonMyInventory)
         Me.SplitContainer1.Panel1.ForeColor = System.Drawing.SystemColors.ControlText
         '
@@ -88,7 +85,7 @@ Partial Class InventarioCliente
         Me.Buttonhome.FlatAppearance.BorderSize = 0
         Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Buttonhome.Location = New System.Drawing.Point(52, 89)
+        Me.Buttonhome.Location = New System.Drawing.Point(61, 138)
         Me.Buttonhome.Name = "Buttonhome"
         Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
         Me.Buttonhome.TabIndex = 7
@@ -110,7 +107,7 @@ Partial Class InventarioCliente
         Me.ButtonOrders.FlatAppearance.BorderSize = 0
         Me.ButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonOrders.Location = New System.Drawing.Point(89, 186)
+        Me.ButtonOrders.Location = New System.Drawing.Point(89, 239)
         Me.ButtonOrders.Name = "ButtonOrders"
         Me.ButtonOrders.Size = New System.Drawing.Size(165, 44)
         Me.ButtonOrders.TabIndex = 5
@@ -120,7 +117,6 @@ Partial Class InventarioCliente
         'ButtonShoppingCart
         '
         Me.ButtonShoppingCart.AllowDrop = True
-        Me.ButtonShoppingCart.BackgroundImage = CType(resources.GetObject("ButtonShoppingCart.BackgroundImage"), System.Drawing.Image)
         Me.ButtonShoppingCart.FlatAppearance.BorderSize = 0
         Me.ButtonShoppingCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonShoppingCart.Font = New System.Drawing.Font("Arial Narrow", 16.0!)
@@ -130,24 +126,12 @@ Partial Class InventarioCliente
         Me.ButtonShoppingCart.TabIndex = 4
         Me.ButtonShoppingCart.UseVisualStyleBackColor = True
         '
-        'ButtonBill
-        '
-        Me.ButtonBill.FlatAppearance.BorderSize = 0
-        Me.ButtonBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonBill.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonBill.Location = New System.Drawing.Point(89, 403)
-        Me.ButtonBill.Name = "ButtonBill"
-        Me.ButtonBill.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonBill.TabIndex = 1
-        Me.ButtonBill.Text = "Facturas"
-        Me.ButtonBill.UseVisualStyleBackColor = True
-        '
         'ButtonMyInventory
         '
         Me.ButtonMyInventory.FlatAppearance.BorderSize = 0
         Me.ButtonMyInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonMyInventory.Location = New System.Drawing.Point(89, 291)
+        Me.ButtonMyInventory.Location = New System.Drawing.Point(89, 365)
         Me.ButtonMyInventory.Name = "ButtonMyInventory"
         Me.ButtonMyInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonMyInventory.TabIndex = 0
@@ -265,7 +249,6 @@ Partial Class InventarioCliente
 
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents ButtonShoppingCart As Button
-    Friend WithEvents ButtonBill As Button
     Friend WithEvents ButtonMyInventory As Button
     Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
     Friend WithEvents DataGridView1 As DataGridView
