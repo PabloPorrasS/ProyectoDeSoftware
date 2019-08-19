@@ -58,11 +58,13 @@ Public Class HomeCliente
 
     Private Sub ButtonMyInventory_Click_1(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
         InventarioCliente.Show()
+        InventarioCliente.LoadGridView()
 
     End Sub
 
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
         PedidosCliente.Show()
+        PedidosCliente.LoadGridView()
     End Sub
 
 
@@ -113,5 +115,6 @@ Public Class HomeCliente
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Carrito.Show()
+        Carrito.LoadGridView()
     End Sub
 End Class
