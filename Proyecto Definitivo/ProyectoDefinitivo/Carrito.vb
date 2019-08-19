@@ -14,13 +14,9 @@ Public Class Carrito
     Dim IdProduct As Integer
     Public cryRpt As New ReportDocument
 
-
-
-
     Private Sub Carrito_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         LoadGridView()
-
 
     End Sub
 
@@ -28,12 +24,9 @@ Public Class Carrito
 
         Dim Id_Profile As Integer
 
-
         Dim Connection As New SqlConnection(ConnectionString)
 
-
         Dim commandselect As SqlCommand
-
 
         Dim SelectQuery As String
         SelectQuery = "Select Id FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
@@ -53,9 +46,6 @@ Public Class Carrito
 
         Connection.Close()
 
-
-
-
         Dim ProductsTable As New DataTable
 
         SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantiy 'Cantidad', Price 'Precio unitario', TotalPrice 'Precio Total' FROM ShoppingCart WHERE Id_Profile ='" & HomeCliente.LabelId_Profile.Text & "'"
@@ -67,9 +57,7 @@ Public Class Carrito
         DataGridView1.Columns(0).Visible = False
         DataGridView1.Columns(1).Visible = False
 
-
     End Sub
-
 
     Private Sub ButtonDeleteCart_Click(sender As Object, e As EventArgs) Handles ButtonDeleteCart.Click
 
@@ -87,9 +75,6 @@ Public Class Carrito
         DataGridView1.DataSource = Nothing
         LoadGridView()
 
-
-
-
     End Sub
 
     Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
@@ -104,23 +89,12 @@ Public Class Carrito
 
     Private Sub ButtonAddNewProduct_Click(sender As Object, e As EventArgs) Handles ButtonConfirmPurchase.Click
 
-
         Dim Id As Integer
         Id = PedidosCliente.Id_Profile.Text
         Dim invoiced As Integer = 0
 
-
-
-
-
-
         Dim IdProduct As Integer
         Dim IdProfile As Integer
-
-
-
-
-
 
         IdProduct = DataGridView1.Item(0, rowOfGridview).Value
         IdProfile = DataGridView1.Item(1, rowOfGridview).Value
@@ -157,8 +131,6 @@ Public Class Carrito
         Command.Dispose()
         Connection.Close()
 
-
-
         Dim NewQuantityProducts As Integer
         Dim QuantityAM As Integer
 
@@ -177,13 +149,9 @@ Public Class Carrito
 
         End If
 
-
         NewQuantityProducts = QuantityAM - Quantity
 
-
-
         Connection.Close()
-
 
         Query = "UPDATE Products SET Quantity=@NewQuantityProducts WHERE Id = '" & IdProduct & "'"
 
@@ -199,7 +167,6 @@ Public Class Carrito
         Command.Dispose()
         Connection.Close()
 
-
         Query = "DELETE FROM ShoppingCart WHERE Id_Product ='" & IdProduct & "'"
         Command = New SqlCommand(Query, Connection)
         Connection.Open()
@@ -207,15 +174,10 @@ Public Class Carrito
         Command.Dispose()
         Connection.Close()
 
-
-
         DataGridView1.DataSource = Nothing
         LoadGridView()
 
-
-
         MessageBox.Show("El Producto " + Name + " fue agregado al inventario")
-
 
     End Sub
 
@@ -267,19 +229,10 @@ Public Class Carrito
 
     End Sub
 
-    Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
         PedidosCliente.Show()
         Me.Hide()
 
-
-
     End Sub
 
-    Private Sub ButtonShoppingCart_Click_1(sender As Object, e As EventArgs) Handles ButtonShoppingCart.Click
-
-    End Sub
 End Class
