@@ -31,9 +31,9 @@ Partial Class HomeCliente
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
         Me.ButtonBill = New System.Windows.Forms.Button()
         Me.ButtonMyInventory = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.LabelWelcome = New System.Windows.Forms.Label()
         Me.LabelNameWelcome = New System.Windows.Forms.Label()
+        Me.LabelWelcome = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -151,6 +151,29 @@ Partial Class HomeCliente
         Me.ButtonMyInventory.Text = "Mi inventario"
         Me.ButtonMyInventory.UseVisualStyleBackColor = True
         '
+        'LabelNameWelcome
+        '
+        Me.LabelNameWelcome.AutoSize = True
+        Me.LabelNameWelcome.Font = New System.Drawing.Font("Elephant", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNameWelcome.ForeColor = System.Drawing.Color.Green
+        Me.LabelNameWelcome.Location = New System.Drawing.Point(238, 123)
+        Me.LabelNameWelcome.Name = "LabelNameWelcome"
+        Me.LabelNameWelcome.Size = New System.Drawing.Size(239, 27)
+        Me.LabelNameWelcome.TabIndex = 2
+        Me.LabelNameWelcome.Text = "oihdsfkgfsdkugsdfkjgf"
+        '
+        'LabelWelcome
+        '
+        Me.LabelWelcome.AutoSize = True
+        Me.LabelWelcome.Font = New System.Drawing.Font("Elephant", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelWelcome.ForeColor = System.Drawing.Color.Green
+        Me.LabelWelcome.Location = New System.Drawing.Point(202, 23)
+        Me.LabelWelcome.Name = "LabelWelcome"
+        Me.LabelWelcome.Size = New System.Drawing.Size(317, 62)
+        Me.LabelWelcome.TabIndex = 1
+        Me.LabelWelcome.Text = "Bienvenido "
+        Me.LabelWelcome.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
@@ -159,29 +182,6 @@ Partial Class HomeCliente
         Me.PictureBox1.Size = New System.Drawing.Size(337, 244)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'LabelWelcome
-        '
-        Me.LabelWelcome.AutoSize = True
-        Me.LabelWelcome.Font = New System.Drawing.Font("Elephant", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelWelcome.ForeColor = System.Drawing.Color.Green
-        Me.LabelWelcome.Location = New System.Drawing.Point(171, 27)
-        Me.LabelWelcome.Name = "LabelWelcome"
-        Me.LabelWelcome.Size = New System.Drawing.Size(317, 62)
-        Me.LabelWelcome.TabIndex = 1
-        Me.LabelWelcome.Text = "Bienvenido "
-        Me.LabelWelcome.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'LabelNameWelcome
-        '
-        Me.LabelNameWelcome.AutoSize = True
-        Me.LabelNameWelcome.Font = New System.Drawing.Font("Elephant", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelNameWelcome.ForeColor = System.Drawing.Color.Green
-        Me.LabelNameWelcome.Location = New System.Drawing.Point(183, 125)
-        Me.LabelNameWelcome.Name = "LabelNameWelcome"
-        Me.LabelNameWelcome.Size = New System.Drawing.Size(239, 27)
-        Me.LabelNameWelcome.TabIndex = 2
-        Me.LabelNameWelcome.Text = "oihdsfkgfsdkugsdfkjgf"
         '
         'HomeCliente
         '

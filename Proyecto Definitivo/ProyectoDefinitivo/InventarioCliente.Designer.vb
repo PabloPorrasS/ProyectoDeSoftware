@@ -25,6 +25,7 @@ Partial Class InventarioCliente
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InventarioCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Buttonhome = New System.Windows.Forms.Button()
         Me.Id_Profile = New System.Windows.Forms.Label()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
@@ -42,7 +43,6 @@ Partial Class InventarioCliente
         Me.InventoryDataSet5 = New ProyectoDefinitivo.InventoryDataSet5()
         Me.ClientProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientProductsTableAdapter = New ProyectoDefinitivo.InventoryDataSet5TableAdapters.ClientProductsTableAdapter()
-        Me.Buttonhome = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -83,6 +83,18 @@ Partial Class InventarioCliente
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 1
         '
+        'Buttonhome
+        '
+        Me.Buttonhome.FlatAppearance.BorderSize = 0
+        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Buttonhome.Location = New System.Drawing.Point(52, 89)
+        Me.Buttonhome.Name = "Buttonhome"
+        Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
+        Me.Buttonhome.TabIndex = 7
+        Me.Buttonhome.Text = "Pagina Principal"
+        Me.Buttonhome.UseVisualStyleBackColor = True
+        '
         'Id_Profile
         '
         Me.Id_Profile.AutoSize = True
@@ -91,6 +103,7 @@ Partial Class InventarioCliente
         Me.Id_Profile.Size = New System.Drawing.Size(39, 13)
         Me.Id_Profile.TabIndex = 6
         Me.Id_Profile.Text = "Label1"
+        Me.Id_Profile.Visible = False
         '
         'ButtonOrders
         '
@@ -219,18 +232,6 @@ Partial Class InventarioCliente
         'ClientProductsTableAdapter
         '
         Me.ClientProductsTableAdapter.ClearBeforeFill = True
-        '
-        'Buttonhome
-        '
-        Me.Buttonhome.FlatAppearance.BorderSize = 0
-        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Buttonhome.Location = New System.Drawing.Point(52, 89)
-        Me.Buttonhome.Name = "Buttonhome"
-        Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
-        Me.Buttonhome.TabIndex = 7
-        Me.Buttonhome.Text = "Pagina Principal"
-        Me.Buttonhome.UseVisualStyleBackColor = True
         '
         'InventarioCliente
         '

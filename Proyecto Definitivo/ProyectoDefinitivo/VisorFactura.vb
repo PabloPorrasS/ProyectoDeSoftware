@@ -2,8 +2,13 @@
 Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
+
+
+
 Public Class VisorFactura
     Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
+    Public cryRpt As New ReportDocument
+
     Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
 
     End Sub
@@ -13,7 +18,41 @@ Public Class VisorFactura
         Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
 
         Dim Connection As New SqlConnection(ConnectionString)
-        Dim Command As New SqlCommand
+        'Dim Command As New SqlCommand
+
+
+
+
+        Dim Command As SqlCommand = New SqlCommand("GeneralSalesReport", Connection)
+
+
+        Dim crtableLogoninfos As New TableLogOnInfos
+        Dim crtableLogoninfo As New TableLogOnInfo
+        Dim crConnectionInfo As New ConnectionInfo
+        Dim CrTables As Tables
+        Dim CrTable As Table
+
+        cryRpt.Load("C:\Users\Pablo Porras\Source\Repos\ProyectoDeSoftware3\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
+
+        With crConnectionInfo
+            .ServerName = "PABLOPORRAS-PC"
+            .DatabaseName = "Inventory"
+            '.UserID = "sa"
+            '.Password = "123456"
+        End With
+
+        CrTables = cryRpt.Database.Tables
+        For Each CrTable In CrTables
+            crtableLogoninfo = CrTable.LogOnInfo
+            crtableLogoninfo.ConnectionInfo = crConnectionInfo
+            CrTable.ApplyLogOnInfo(crtableLogoninfo)
+        Next
+
+        CrystalReportViewer1.ReportSource = cryRpt
+        CrystalReportViewer1.Refresh()
+
+
+
 
         Connection.Open()
         Command.Connection = Connection
@@ -63,4 +102,50 @@ Public Class VisorFactura
 
 
     End Sub
+
+    Private Sub ButtonDownloadBill_Click(sender As Object, e As EventArgs) Handles ButtonDownloadBill.Click
+
+
+        'Dim CrExportOptions As ExportOptions
+        'Dim CrDiskFileDestinationOptions As New _
+        'DiskFileDestinationOptions()
+        'Dim CrFormatTypeOptions As New PdfRtfWordFormatOptions()
+        'CrDiskFileDestinationOptions.DiskFileName = "C:\test123.pdf"
+        'CrExportOptions = cryRpt.ExportOptions
+        'With CrExportOptions
+        '    .ExportDestinationType = ExportDestinationType.DiskFile
+        '    .ExportFormatType = ExportFormatType.PortableDocFormat
+        '    .DestinationOptions = CrDiskFileDestinationOptions
+        '    .FormatOptions = CrFormatTypeOptions
+        'End With
+
+
+        'cryRpt.Export(CrExportOptions)
+
+        'cryRpt.Close()
+        'cryRpt.Dispose()
+
+        Dim CrReport As New CrystalDecisions.CrystalReports.Engine.ReportClass ' Report Name 
+        CrReport = CrystalReportViewer1.ReportSource
+
+        Try
+            CrReport.ExportToDisk(ExportFormatType.PortableDocFormat, "C:\Users\Pablo Porras\Downloads\factura.pdf")
+
+        Catch err As Exception
+
+            MessageBox.Show(err.ToString())
+
+        End Try
+
+        MessageBox.Show("La factura se descargó con éxito")
+    End Sub
+
+
+
+
+
+
+
+
+
 End Class
