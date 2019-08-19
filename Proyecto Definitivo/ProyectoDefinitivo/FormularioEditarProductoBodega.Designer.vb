@@ -162,7 +162,7 @@ Partial Class FormularioEditar
         '
         'TextBoxName
         '
-        Me.TextBoxName.Location = New System.Drawing.Point(168, 27)
+        Me.TextBoxName.Location = New System.Drawing.Point(168, 25)
         Me.TextBoxName.Name = "TextBoxName"
         Me.TextBoxName.Size = New System.Drawing.Size(183, 20)
         Me.TextBoxName.TabIndex = 27
