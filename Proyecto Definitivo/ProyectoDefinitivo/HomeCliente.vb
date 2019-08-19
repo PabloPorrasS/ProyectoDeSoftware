@@ -79,6 +79,7 @@ Public Class HomeCliente
 
         Dim welcomeName As String
 
+
         Dim Connection As New SqlConnection(ConnectionString)
 
         Dim commandselect As SqlCommand
