@@ -70,7 +70,7 @@ Public Class PedidosCliente
         DataGridView1.DataSource = ProductsTable
 
         DataGridView1.Columns(0).Visible = False
-
+        DataGridView1.Columns(5).Visible = False
 
 
     End Sub

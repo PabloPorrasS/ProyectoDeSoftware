@@ -60,6 +60,7 @@ Partial Class HomeCliente
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.BackColor = System.Drawing.Color.White
         Me.SplitContainer1.Panel2.Controls.Add(Me.LabelNameWelcome)
         Me.SplitContainer1.Panel2.Controls.Add(Me.LabelWelcome)
         Me.SplitContainer1.Panel2.Controls.Add(Me.PictureBox1)
