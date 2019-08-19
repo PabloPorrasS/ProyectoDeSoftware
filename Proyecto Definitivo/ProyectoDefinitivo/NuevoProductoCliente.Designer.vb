@@ -43,6 +43,7 @@ Partial Class NuevoProductoCliente
         'NumericUpDownQuantityClient
         '
         Me.NumericUpDownQuantityClient.Location = New System.Drawing.Point(224, 59)
+        Me.NumericUpDownQuantityClient.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
         Me.NumericUpDownQuantityClient.Name = "NumericUpDownQuantityClient"
         Me.NumericUpDownQuantityClient.Size = New System.Drawing.Size(126, 20)
         Me.NumericUpDownQuantityClient.TabIndex = 3

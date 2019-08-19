@@ -62,6 +62,7 @@ Partial Class EditarCarrito
         'NumericUpDownQuantityClient
         '
         Me.NumericUpDownQuantityClient.Location = New System.Drawing.Point(225, 62)
+        Me.NumericUpDownQuantityClient.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
         Me.NumericUpDownQuantityClient.Name = "NumericUpDownQuantityClient"
         Me.NumericUpDownQuantityClient.Size = New System.Drawing.Size(126, 20)
         Me.NumericUpDownQuantityClient.TabIndex = 8
