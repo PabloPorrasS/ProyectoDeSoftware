@@ -41,4 +41,24 @@ Public Class HomeAM
     Private Sub ButtonShoppingCart_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Login.Show()
+        Login.TextBoxEmail.Text = ""
+        Login.TextBoxPassword.Text = ""
+        AgregarProductoBodega.Close()
+        Carrito.Close()
+        EditarCarrito.Close()
+        EditarPerfil.Close()
+        EditarProductoTienda.Close()
+        Facturas.Close()
+        FormularioDeRegistro.Close()
+        FormularioEditar.Close()
+        InventarioAM.Close()
+        InventarioCliente.Close()
+        NuevoProductoCliente.Close()
+        PedidosCliente.Close()
+        Me.Close()
+
+    End Sub
 End Class

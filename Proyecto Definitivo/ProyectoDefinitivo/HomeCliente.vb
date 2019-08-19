@@ -131,7 +131,10 @@ Public Class HomeCliente
         Facturas.Close()
         FormularioDeRegistro.Close()
         FormularioEditar.Close()
+        InventarioAM.Close()
+        InventarioCliente.Close()
         NuevoProductoCliente.Close()
+        PedidosCliente.Close()
         Me.Close()
 
     End Sub

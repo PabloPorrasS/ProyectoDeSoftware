@@ -28,6 +28,7 @@ Partial Class HomeAM
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LabelWelcomeAM = New System.Windows.Forms.Label()
         Me.LabelNameWelcomeAM = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,7 +47,7 @@ Partial Class HomeAM
         Me.ButtonInventory.FlatAppearance.BorderSize = 0
         Me.ButtonInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonInventory.Location = New System.Drawing.Point(55, 142)
+        Me.ButtonInventory.Location = New System.Drawing.Point(48, 255)
         Me.ButtonInventory.Name = "ButtonInventory"
         Me.ButtonInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonInventory.TabIndex = 11
@@ -85,12 +86,26 @@ Partial Class HomeAM
         Me.LabelNameWelcomeAM.TabIndex = 15
         Me.LabelNameWelcomeAM.Text = "AM"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Red
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Button2.Location = New System.Drawing.Point(109, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(165, 44)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Cerrar sesion"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'HomeAM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1016, 583)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.LabelNameWelcomeAM)
         Me.Controls.Add(Me.LabelWelcomeAM)
         Me.Controls.Add(Me.PictureBox1)
@@ -114,4 +129,5 @@ Partial Class HomeAM
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LabelWelcomeAM As Label
     Friend WithEvents LabelNameWelcomeAM As Label
+    Friend WithEvents Button2 As Button
 End Class
