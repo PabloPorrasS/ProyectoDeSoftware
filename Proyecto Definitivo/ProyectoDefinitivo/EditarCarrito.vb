@@ -75,9 +75,6 @@ Public Class EditarCarrito
 
     End Sub
 
-    Private Sub NumericUpDownQuantityClient_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDownQuantityClient.ValueChanged
-
-    End Sub
 
     Private Sub NumericUpDownQuantityClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NumericUpDownQuantityClient.KeyPress
         If Char.IsNumber(e.KeyChar) Then
