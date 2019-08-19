@@ -58,7 +58,7 @@ Public Class Carrito
 
         Dim ProductsTable As New DataTable
 
-        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantiy 'Cantidad', Price 'Precio unitario' FROM ShoppingCart WHERE Id_Profile ='" & HomeCliente.LabelId_Profile.Text & "'"
+        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantiy 'Cantidad', Price 'Precio unitario', TotalPrice 'Precio Total' FROM ShoppingCart WHERE Id_Profile ='" & HomeCliente.LabelId_Profile.Text & "'"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(ProductsTable)
@@ -214,7 +214,7 @@ Public Class Carrito
 
 
 
-
+        MessageBox.Show("El Producto " + Name + " fue agregado al inventario")
 
 
     End Sub
