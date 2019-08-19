@@ -65,9 +65,7 @@ Public Class PedidosCliente
     End Sub
 
     Private Sub ButtonAddToCart_Click(sender As Object, e As EventArgs) Handles ButtonAddToCart.Click
-        If Quantity > Then
 
-        End If
         NuevoProductoCliente.Show()
 
     End Sub
