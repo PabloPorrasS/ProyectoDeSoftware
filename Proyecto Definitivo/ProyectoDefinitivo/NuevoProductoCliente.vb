@@ -51,7 +51,7 @@ Public Class NuevoProductoCliente
 
         TotalPrice = Quantity * Price
 
-        Query = "INSERT INTO ShoppingCart (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantiy, Price) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price)"
+        Query = "INSERT INTO ShoppingCart (Id_Product, Id_Profile, Name, Brand, Category, Code, Quantiy, Price, TotalPrice) VALUES (@Id_Product, @Id, @Name, @Brand, @Category, @Code, @Quantity, @Price, @TotalPrice)"
 
         Dim Command As SqlCommand
         Command = New SqlCommand(Query, Connection)
@@ -66,7 +66,7 @@ Public Class NuevoProductoCliente
             .Parameters.AddWithValue("@Code", Code)
             .Parameters.AddWithValue("@Quantity", Quantity)
             .Parameters.AddWithValue("@Price", Price)
-
+            .Parameters.AddWithValue("@TotalPrice", TotalPrice)
 
         End With
 
@@ -77,6 +77,8 @@ Public Class NuevoProductoCliente
 
         PedidosCliente.DataGridView1.DataSource = Nothing
         PedidosCliente.LoadGridView()
+
+        MessageBox.Show("Producto agregado al carrito de compras")
 
 
         Me.Close()

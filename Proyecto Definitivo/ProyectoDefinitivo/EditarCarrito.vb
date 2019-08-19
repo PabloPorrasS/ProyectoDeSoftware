@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class EditarCarrito
 
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
 
 
     Private Sub editar_carrito_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -49,7 +49,7 @@ Public Class EditarCarrito
 
         Dim Query As String
 
-        Query = "UPDATE ShoppingCart SET Quantity=@Quantity, TotalPrice=@TotalPrice WHERE Id_Profile = '" & HomeCliente.LabelId_Profile.Text & "' And Name = '" & LabelProductName.Text & "'"
+        Query = "UPDATE ShoppingCart SET Quantiy=@Quantity, TotalPrice=@TotalPrice WHERE Id_Profile = '" & HomeCliente.LabelId_Profile.Text & "' And Name = '" & LabelProductName.Text & "'"
 
         Dim Command As SqlCommand
         Command = New SqlCommand(Query, Connection)

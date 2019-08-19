@@ -23,6 +23,7 @@ Partial Class VisorFactura
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.ButtonDownloadBill = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -30,17 +31,28 @@ Partial Class VisorFactura
         Me.CrystalReportViewer1.ActiveViewIndex = -1
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.DisplayToolbar = False
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(800, 450)
         Me.CrystalReportViewer1.TabIndex = 0
         '
+        'ButtonDownloadBill
+        '
+        Me.ButtonDownloadBill.Location = New System.Drawing.Point(0, 386)
+        Me.ButtonDownloadBill.Name = "ButtonDownloadBill"
+        Me.ButtonDownloadBill.Size = New System.Drawing.Size(201, 43)
+        Me.ButtonDownloadBill.TabIndex = 1
+        Me.ButtonDownloadBill.Text = "Descargar Factura"
+        Me.ButtonDownloadBill.UseVisualStyleBackColor = True
+        '
         'VisorFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ButtonDownloadBill)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "VisorFactura"
         Me.Text = "VisorFactrua"
@@ -49,4 +61,5 @@ Partial Class VisorFactura
     End Sub
 
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents ButtonDownloadBill As Button
 End Class

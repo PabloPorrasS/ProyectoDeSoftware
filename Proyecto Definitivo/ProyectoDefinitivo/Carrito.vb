@@ -12,6 +12,7 @@ Public Class Carrito
     Dim Quantity As Integer
     Dim Price As Integer
     Dim IdProduct As Integer
+    Public cryRpt As New ReportDocument
 
 
 
@@ -57,7 +58,7 @@ Public Class Carrito
 
         Dim ProductsTable As New DataTable
 
-        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantiy 'Cantidad', Price 'Precio unitario' FROM ShoppingCart WHERE Id_Profile ='" & HomeCliente.LabelId_Profile.Text & "'"
+        SelectQuery = "SELECT Id_Product 'Id_Product', Id_Profile 'Id_Profile', Name 'Nombre', Brand 'Marca', Category 'Categoria', Code 'Codigo', Quantiy 'Cantidad', Price 'Precio unitario', TotalPrice 'Precio Total' FROM ShoppingCart WHERE Id_Profile ='" & HomeCliente.LabelId_Profile.Text & "'"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Dim dataAdapter As New SqlDataAdapter(commandselect)
         dataAdapter.Fill(ProductsTable)
@@ -213,7 +214,7 @@ Public Class Carrito
 
 
 
-
+        MessageBox.Show("El Producto " + Name + " fue agregado al inventario")
 
 
     End Sub
@@ -228,37 +229,37 @@ Public Class Carrito
 
     Private Sub ButtonGenerateBill_Click(sender As Object, e As EventArgs) Handles ButtonGenerateBill.Click
 
-        Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
+        'Dim ParametroId As Integer = HomeCliente.LabelId_Profile.Text
 
-        Dim Connection As SqlConnection = New SqlConnection(ConnectionString)
+        'Dim Connection As SqlConnection = New SqlConnection(ConnectionString)
 
-        Dim Command As SqlCommand = New SqlCommand("GeneralSalesReport", Connection)
+        'Dim Command As SqlCommand = New SqlCommand("GeneralSalesReport", Connection)
 
-        Dim cryRpt As New ReportDocument
-        Dim crtableLogoninfos As New TableLogOnInfos
-        Dim crtableLogoninfo As New TableLogOnInfo
-        Dim crConnectionInfo As New ConnectionInfo
-        Dim CrTables As Tables
-        Dim CrTable As Table
 
-        cryRpt.Load("C:\Users\Pablo Porras\Source\Repos\ProyectoDeSoftware3\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
+        'Dim crtableLogoninfos As New TableLogOnInfos
+        'Dim crtableLogoninfo As New TableLogOnInfo
+        'Dim crConnectionInfo As New ConnectionInfo
+        'Dim CrTables As Tables
+        'Dim CrTable As Table
 
-        With crConnectionInfo
-            .ServerName = "PABLOPORRAS-PC"
-            .DatabaseName = "Inventory"
-            '.UserID = "sa"
-            '.Password = "123456"
-        End With
+        'cryRpt.Load("C:\Users\Pablo Porras\Source\Repos\ProyectoDeSoftware3\Proyecto Definitivo\ProyectoDefinitivo\CrystalReport1.rpt")
 
-        CrTables = cryRpt.Database.Tables
-        For Each CrTable In CrTables
-            crtableLogoninfo = CrTable.LogOnInfo
-            crtableLogoninfo.ConnectionInfo = crConnectionInfo
-            CrTable.ApplyLogOnInfo(crtableLogoninfo)
-        Next
+        'With crConnectionInfo
+        '    .ServerName = "PABLOPORRAS-PC"
+        '    .DatabaseName = "Inventory"
+        '    '.UserID = "sa"
+        '    '.Password = "123456"
+        'End With
 
-        VisorFactura.CrystalReportViewer1.ReportSource = cryRpt
-        VisorFactura.CrystalReportViewer1.Refresh()
+        'CrTables = cryRpt.Database.Tables
+        'For Each CrTable In CrTables
+        '    crtableLogoninfo = CrTable.LogOnInfo
+        '    crtableLogoninfo.ConnectionInfo = crConnectionInfo
+        '    CrTable.ApplyLogOnInfo(crtableLogoninfo)
+        'Next
+
+        'VisorFactura.CrystalReportViewer1.ReportSource = cryRpt
+        'VisorFactura.CrystalReportViewer1.Refresh()
 
         VisorFactura.Show()
 
