@@ -26,6 +26,7 @@ Partial Class PedidosCliente
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PedidosCliente))
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Buttonhome = New System.Windows.Forms.Button()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.Id_Profile = New System.Windows.Forms.Label()
         Me.ButtonShoppingCart = New System.Windows.Forms.Button()
@@ -39,7 +40,6 @@ Partial Class PedidosCliente
         Me.InventoryDataSet4 = New ProyectoDefinitivo.InventoryDataSet4()
         Me.ProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductsTableAdapter1 = New ProyectoDefinitivo.InventoryDataSet4TableAdapters.ProductsTableAdapter()
-        Me.Buttonhome = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -74,6 +74,18 @@ Partial Class PedidosCliente
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 1
+        '
+        'Buttonhome
+        '
+        Me.Buttonhome.FlatAppearance.BorderSize = 0
+        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Buttonhome.Location = New System.Drawing.Point(59, 120)
+        Me.Buttonhome.Name = "Buttonhome"
+        Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
+        Me.Buttonhome.TabIndex = 8
+        Me.Buttonhome.Text = "Pagina Principal"
+        Me.Buttonhome.UseVisualStyleBackColor = True
         '
         'ButtonOrders
         '
@@ -183,18 +195,6 @@ Partial Class PedidosCliente
         'ProductsTableAdapter1
         '
         Me.ProductsTableAdapter1.ClearBeforeFill = True
-        '
-        'Buttonhome
-        '
-        Me.Buttonhome.FlatAppearance.BorderSize = 0
-        Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Buttonhome.Location = New System.Drawing.Point(59, 120)
-        Me.Buttonhome.Name = "Buttonhome"
-        Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
-        Me.Buttonhome.TabIndex = 8
-        Me.Buttonhome.Text = "Pagina Principal"
-        Me.Buttonhome.UseVisualStyleBackColor = True
         '
         'PedidosCliente
         '

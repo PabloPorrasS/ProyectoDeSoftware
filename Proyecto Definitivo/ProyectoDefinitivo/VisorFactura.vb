@@ -106,24 +106,6 @@ Public Class VisorFactura
     Private Sub ButtonDownloadBill_Click(sender As Object, e As EventArgs) Handles ButtonDownloadBill.Click
 
 
-        'Dim CrExportOptions As ExportOptions
-        'Dim CrDiskFileDestinationOptions As New _
-        'DiskFileDestinationOptions()
-        'Dim CrFormatTypeOptions As New PdfRtfWordFormatOptions()
-        'CrDiskFileDestinationOptions.DiskFileName = "C:\test123.pdf"
-        'CrExportOptions = cryRpt.ExportOptions
-        'With CrExportOptions
-        '    .ExportDestinationType = ExportDestinationType.DiskFile
-        '    .ExportFormatType = ExportFormatType.PortableDocFormat
-        '    .DestinationOptions = CrDiskFileDestinationOptions
-        '    .FormatOptions = CrFormatTypeOptions
-        'End With
-
-
-        'cryRpt.Export(CrExportOptions)
-
-        'cryRpt.Close()
-        'cryRpt.Dispose()
 
         Dim CrReport As New CrystalDecisions.CrystalReports.Engine.ReportClass ' Report Name 
         CrReport = CrystalReportViewer1.ReportSource
