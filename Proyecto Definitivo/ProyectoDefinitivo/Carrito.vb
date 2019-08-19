@@ -80,6 +80,7 @@ Public Class Carrito
     Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
         InventarioCliente.Show()
         Me.Hide()
+        InventarioCliente.LoadGridView()
     End Sub
 
     Private Sub ButtonBill_Click(sender As Object, e As EventArgs)
@@ -232,6 +233,7 @@ Public Class Carrito
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
         PedidosCliente.Show()
         Me.Hide()
+        PedidosCliente.LoadGridView()
 
     End Sub
 
