@@ -84,7 +84,70 @@ Public Class FormularioEditar
 
     End Sub
 
-    Private Sub TextBoxBrand_TextChanged(sender As Object, e As EventArgs) Handles TextBoxBrand.TextChanged
 
+    Private Sub TextBoxName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxName.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBoxBrand_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxBrand.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBoxCategory_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxCategory.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBoxCode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxCode.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+    End Sub
+
+    Private Sub NumericUpDownQuantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NumericUpDownQuantity.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBoxPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxPrice.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
     End Sub
 End Class

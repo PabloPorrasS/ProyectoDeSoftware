@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class EditarPerfil
-    Dim ConnectionString As String = "Data Source=SP-LA-LAB9-13;Initial Catalog=Inventory;Integrated Security=True"
+    Dim ConnectionString As String = "Data Source=PABLOPORRAS-PC;Initial Catalog=Inventory;Integrated Security=True"
 
     Private Sub EditarPerfil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -55,7 +55,7 @@ Public Class EditarPerfil
 
             reader.Read()
             LabelIdProfile.Text = reader.GetInt32(0).ToString
-            Name = Reader.GetString(1)
+            Name = reader.GetString(1)
 
             Password = reader.GetString(5)
             TypeOfBussiness = reader.GetInt32(6)
@@ -124,5 +124,16 @@ Public Class EditarPerfil
 
         Me.Close()
 
+    End Sub
+
+    Private Sub TextBoxCompleteName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxCompleteName.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
     End Sub
 End Class
