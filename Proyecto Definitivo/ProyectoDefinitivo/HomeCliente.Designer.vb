@@ -24,6 +24,7 @@ Partial Class HomeCliente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonEditProfile = New System.Windows.Forms.Button()
         Me.LabelId_Profile = New System.Windows.Forms.Label()
@@ -34,7 +35,6 @@ Partial Class HomeCliente
         Me.LabelNameWelcome = New System.Windows.Forms.Label()
         Me.LabelWelcome = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -69,6 +69,19 @@ Partial Class HomeCliente
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Red
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Button2.Location = New System.Drawing.Point(170, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(165, 44)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "Cerrar sesion"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -180,19 +193,6 @@ Partial Class HomeCliente
         Me.PictureBox1.Size = New System.Drawing.Size(337, 244)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Red
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Button2.Location = New System.Drawing.Point(170, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(165, 44)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Cerrar sesion"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'HomeCliente
         '

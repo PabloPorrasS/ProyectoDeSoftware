@@ -132,4 +132,8 @@ Public Class HomeCliente
         Me.Close()
 
     End Sub
+
+    Private Sub LabelWelcome_Click(sender As Object, e As EventArgs) Handles LabelWelcome.Click
+
+    End Sub
 End Class
