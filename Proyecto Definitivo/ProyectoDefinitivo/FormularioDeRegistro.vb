@@ -56,28 +56,32 @@ Public Class FormularioDeRegistro
         Dim Command As SqlCommand
         Command = New SqlCommand(Query, Connection)
 
+
+
         With Command
 
-            .Parameters.AddWithValue("@CompleteName", CompleteName)
-            .Parameters.AddWithValue("@IdTypeOfBusiness", TypeOfBusiness)
-            .Parameters.AddWithValue("@Ubication", Ubication)
-            .Parameters.AddWithValue("@Email", Email)
-            .Parameters.AddWithValue("@Password", Password)
-            .Parameters.AddWithValue("@TypeOfUser", TypeOfUser)
+                .Parameters.AddWithValue("@CompleteName", CompleteName)
+                .Parameters.AddWithValue("@IdTypeOfBusiness", TypeOfBusiness)
+                .Parameters.AddWithValue("@Ubication", Ubication)
+                .Parameters.AddWithValue("@Email", Email)
+                .Parameters.AddWithValue("@Password", Password)
+                .Parameters.AddWithValue("@TypeOfUser", TypeOfUser)
 
-        End With
-
-        Connection.Open()
-        Command.ExecuteNonQuery()
-        Command.Dispose()
-        Connection.Close()
-
-        'Try
+            End With
 
 
-        'Catch ex As Exception
+        Try
+            Connection.Open()
+            Command.ExecuteNonQuery()
+            Command.Dispose()
+            Connection.Close()
 
-        'End Try
+
+        Catch ex As Exception
+            MessageBox.Show("No se puede registrar dos veces el mismo correo")
+            Exit Sub
+        End Try
+
 
         MsgBox("Tú perfil ha sido guardado con la siguiente información" & vbCrLf & vbCrLf & "Nombre: " & CompleteName & vbCrLf & "Email: " & Email & vbCrLf & "Contraseña: " & Password & vbCrLf & "Tipo de Negocio: " & TypeOfBusiness & vbCrLf & "Ubicación del negocio: " & Ubication)
         Me.Close()
@@ -85,6 +89,17 @@ Public Class FormularioDeRegistro
     End Sub
 
     Private Sub TextBoxCompleteName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxCompleteName.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBoxUbication_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxUbication.KeyPress
         If Char.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf Char.IsControl(e.KeyChar) Then
