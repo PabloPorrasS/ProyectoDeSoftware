@@ -24,6 +24,7 @@ Partial Class HomeCliente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonEditProfile = New System.Windows.Forms.Button()
         Me.LabelId_Profile = New System.Windows.Forms.Label()
         Me.ButtonOrders = New System.Windows.Forms.Button()
@@ -33,7 +34,6 @@ Partial Class HomeCliente
         Me.LabelNameWelcome = New System.Windows.Forms.Label()
         Me.LabelWelcome = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -67,6 +67,18 @@ Partial Class HomeCliente
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Button1.Location = New System.Drawing.Point(58, 421)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(221, 44)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Carrito de compras"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'ButtonEditProfile
         '
@@ -161,23 +173,11 @@ Partial Class HomeCliente
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(182, 222)
+        Me.PictureBox1.Location = New System.Drawing.Point(182, 221)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(337, 244)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Button1.Location = New System.Drawing.Point(58, 421)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(221, 44)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Carrito de compras"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'HomeCliente
         '
