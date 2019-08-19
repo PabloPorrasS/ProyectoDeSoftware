@@ -24,6 +24,7 @@ Partial Class HomeCliente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.ButtonEditProfile = New System.Windows.Forms.Button()
         Me.LabelId_Profile = New System.Windows.Forms.Label()
         Me.ButtonOrders = New System.Windows.Forms.Button()
         Me.LabelTypeOfUser = New System.Windows.Forms.Label()
@@ -32,7 +33,7 @@ Partial Class HomeCliente
         Me.LabelNameWelcome = New System.Windows.Forms.Label()
         Me.LabelWelcome = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ButtonEditProfile = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -49,6 +50,7 @@ Partial Class HomeCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonEditProfile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.LabelId_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
@@ -66,6 +68,18 @@ Partial Class HomeCliente
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 0
         '
+        'ButtonEditProfile
+        '
+        Me.ButtonEditProfile.FlatAppearance.BorderSize = 0
+        Me.ButtonEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonEditProfile.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.ButtonEditProfile.Location = New System.Drawing.Point(88, 341)
+        Me.ButtonEditProfile.Name = "ButtonEditProfile"
+        Me.ButtonEditProfile.Size = New System.Drawing.Size(165, 44)
+        Me.ButtonEditProfile.TabIndex = 9
+        Me.ButtonEditProfile.Text = "Editar Perfil"
+        Me.ButtonEditProfile.UseVisualStyleBackColor = True
+        '
         'LabelId_Profile
         '
         Me.LabelId_Profile.AutoSize = True
@@ -81,7 +95,7 @@ Partial Class HomeCliente
         Me.ButtonOrders.FlatAppearance.BorderSize = 0
         Me.ButtonOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonOrders.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonOrders.Location = New System.Drawing.Point(91, 161)
+        Me.ButtonOrders.Location = New System.Drawing.Point(88, 138)
         Me.ButtonOrders.Name = "ButtonOrders"
         Me.ButtonOrders.Size = New System.Drawing.Size(165, 44)
         Me.ButtonOrders.TabIndex = 6
@@ -115,7 +129,7 @@ Partial Class HomeCliente
         Me.ButtonMyInventory.FlatAppearance.BorderSize = 0
         Me.ButtonMyInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonMyInventory.Location = New System.Drawing.Point(91, 255)
+        Me.ButtonMyInventory.Location = New System.Drawing.Point(88, 232)
         Me.ButtonMyInventory.Name = "ButtonMyInventory"
         Me.ButtonMyInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonMyInventory.TabIndex = 0
@@ -129,9 +143,8 @@ Partial Class HomeCliente
         Me.LabelNameWelcome.ForeColor = System.Drawing.Color.Green
         Me.LabelNameWelcome.Location = New System.Drawing.Point(238, 123)
         Me.LabelNameWelcome.Name = "LabelNameWelcome"
-        Me.LabelNameWelcome.Size = New System.Drawing.Size(239, 27)
+        Me.LabelNameWelcome.Size = New System.Drawing.Size(0, 27)
         Me.LabelNameWelcome.TabIndex = 2
-        Me.LabelNameWelcome.Text = "oihdsfkgfsdkugsdfkjgf"
         '
         'LabelWelcome
         '
@@ -154,17 +167,17 @@ Partial Class HomeCliente
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'ButtonEditProfile
+        'Button1
         '
-        Me.ButtonEditProfile.FlatAppearance.BorderSize = 0
-        Me.ButtonEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonEditProfile.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonEditProfile.Location = New System.Drawing.Point(91, 364)
-        Me.ButtonEditProfile.Name = "ButtonEditProfile"
-        Me.ButtonEditProfile.Size = New System.Drawing.Size(165, 44)
-        Me.ButtonEditProfile.TabIndex = 9
-        Me.ButtonEditProfile.Text = "Editar Perfil"
-        Me.ButtonEditProfile.UseVisualStyleBackColor = True
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Button1.Location = New System.Drawing.Point(58, 421)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(221, 44)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Carrito de compras"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'HomeCliente
         '
@@ -200,4 +213,5 @@ Partial Class HomeCliente
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LabelNameWelcome As Label
     Friend WithEvents ButtonEditProfile As Button
+    Friend WithEvents Button1 As Button
 End Class

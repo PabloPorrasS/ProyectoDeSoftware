@@ -41,6 +41,7 @@ Partial Class InventarioCliente
         Me.InventoryDataSet5 = New ProyectoDefinitivo.InventoryDataSet5()
         Me.ClientProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientProductsTableAdapter = New ProyectoDefinitivo.InventoryDataSet5TableAdapters.ClientProductsTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -64,6 +65,7 @@ Partial Class InventarioCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Buttonhome)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Id_Profile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonOrders)
@@ -131,7 +133,7 @@ Partial Class InventarioCliente
         Me.ButtonMyInventory.FlatAppearance.BorderSize = 0
         Me.ButtonMyInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonMyInventory.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.ButtonMyInventory.Location = New System.Drawing.Point(89, 365)
+        Me.ButtonMyInventory.Location = New System.Drawing.Point(89, 333)
         Me.ButtonMyInventory.Name = "ButtonMyInventory"
         Me.ButtonMyInventory.Size = New System.Drawing.Size(165, 44)
         Me.ButtonMyInventory.TabIndex = 0
@@ -217,6 +219,18 @@ Partial Class InventarioCliente
         '
         Me.ClientProductsTableAdapter.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Button1.Location = New System.Drawing.Point(61, 417)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(221, 44)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Carrito de compras"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'InventarioCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -265,4 +279,5 @@ Partial Class InventarioCliente
     Friend WithEvents ClientProductsBindingSource As BindingSource
     Friend WithEvents ClientProductsTableAdapter As InventoryDataSet5TableAdapters.ClientProductsTableAdapter
     Friend WithEvents Buttonhome As Button
+    Friend WithEvents Button1 As Button
 End Class

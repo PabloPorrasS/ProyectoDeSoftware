@@ -110,4 +110,8 @@ Public Class HomeCliente
         Carrito.Show()
         Carrito.LoadGridView()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Carrito.Show()
+    End Sub
 End Class

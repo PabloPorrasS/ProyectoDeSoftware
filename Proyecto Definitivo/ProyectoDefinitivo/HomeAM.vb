@@ -9,14 +9,14 @@ Public Class HomeAM
     End Sub
 
     Private Sub HomeAM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim welcomeName As Integer
+        Dim welcomeName As String
 
         Dim Connection As New SqlConnection(ConnectionString)
 
         Dim commandselect As SqlCommand
 
         Dim SelectQuery As String
-        SelectQuery = "Select CompleteName FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
+        SelectQuery = "Select * FROM Profile WHERE Email ='" & Login.TextBoxEmail.Text & "'"
         commandselect = New SqlCommand(SelectQuery, Connection)
         Connection.Open()
 
@@ -25,7 +25,7 @@ Public Class HomeAM
 
         If reader.HasRows Then
             reader.Read()
-            welcomeName = reader.GetInt32(1)
+            welcomeName = reader.GetString(1)
 
         End If
 

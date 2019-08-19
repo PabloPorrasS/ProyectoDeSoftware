@@ -57,6 +57,7 @@ Partial Class FormularioEditar
         '
         Me.NumericUpDownQuantity.Location = New System.Drawing.Point(168, 248)
         Me.NumericUpDownQuantity.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
+        Me.NumericUpDownQuantity.Minimum = New Decimal(New Integer() {1410065407, 2, 0, -2147483648})
         Me.NumericUpDownQuantity.Name = "NumericUpDownQuantity"
         Me.NumericUpDownQuantity.Size = New System.Drawing.Size(183, 20)
         Me.NumericUpDownQuantity.TabIndex = 24
