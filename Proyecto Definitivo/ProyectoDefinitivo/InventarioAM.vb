@@ -129,4 +129,8 @@ Public Class InventarioAM
         LoadGridView()
 
     End Sub
+
+    Private Sub ButtonInventory_Click(sender As Object, e As EventArgs) Handles ButtonInventory.Click
+
+    End Sub
 End Class
