@@ -89,7 +89,7 @@ Partial Class PedidosCliente
         Me.Buttonhome.FlatAppearance.BorderSize = 0
         Me.Buttonhome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Buttonhome.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
-        Me.Buttonhome.Location = New System.Drawing.Point(59, 120)
+        Me.Buttonhome.Location = New System.Drawing.Point(59, 113)
         Me.Buttonhome.Name = "Buttonhome"
         Me.Buttonhome.Size = New System.Drawing.Size(236, 44)
         Me.Buttonhome.TabIndex = 8
