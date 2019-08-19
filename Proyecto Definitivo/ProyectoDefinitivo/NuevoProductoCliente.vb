@@ -85,4 +85,15 @@ Public Class NuevoProductoCliente
 
 
     End Sub
+
+    Private Sub NumericUpDownQuantityClient_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NumericUpDownQuantityClient.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+    End Sub
 End Class
