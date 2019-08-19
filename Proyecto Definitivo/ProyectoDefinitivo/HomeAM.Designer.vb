@@ -81,9 +81,9 @@ Partial Class HomeAM
         Me.LabelNameWelcomeAM.ForeColor = System.Drawing.Color.Green
         Me.LabelNameWelcomeAM.Location = New System.Drawing.Point(489, 159)
         Me.LabelNameWelcomeAM.Name = "LabelNameWelcomeAM"
-        Me.LabelNameWelcomeAM.Size = New System.Drawing.Size(239, 27)
+        Me.LabelNameWelcomeAM.Size = New System.Drawing.Size(51, 27)
         Me.LabelNameWelcomeAM.TabIndex = 15
-        Me.LabelNameWelcomeAM.Text = "oihdsfkgfsdkugsdfkjgf"
+        Me.LabelNameWelcomeAM.Text = "AM"
         '
         'HomeAM
         '

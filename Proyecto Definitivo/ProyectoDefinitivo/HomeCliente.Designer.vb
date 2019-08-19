@@ -24,6 +24,7 @@ Partial Class HomeCliente
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HomeCliente))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonEditProfile = New System.Windows.Forms.Button()
         Me.LabelId_Profile = New System.Windows.Forms.Label()
@@ -50,6 +51,7 @@ Partial Class HomeCliente
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.Green
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ButtonEditProfile)
         Me.SplitContainer1.Panel1.Controls.Add(Me.LabelId_Profile)
@@ -67,6 +69,19 @@ Partial Class HomeCliente
         Me.SplitContainer1.Size = New System.Drawing.Size(1016, 583)
         Me.SplitContainer1.SplitterDistance = 338
         Me.SplitContainer1.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Red
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 20.0!)
+        Me.Button2.Location = New System.Drawing.Point(170, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(165, 44)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "Cerrar sesion"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -173,7 +188,7 @@ Partial Class HomeCliente
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(182, 221)
+        Me.PictureBox1.Location = New System.Drawing.Point(182, 222)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(337, 244)
         Me.PictureBox1.TabIndex = 0
@@ -214,4 +229,5 @@ Partial Class HomeCliente
     Friend WithEvents LabelNameWelcome As Label
     Friend WithEvents ButtonEditProfile As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

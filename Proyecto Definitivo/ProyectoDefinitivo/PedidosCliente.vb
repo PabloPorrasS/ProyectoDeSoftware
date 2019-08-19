@@ -80,6 +80,7 @@ Public Class PedidosCliente
     Private Sub ButtonMyInventory_Click(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
         InventarioCliente.Show()
         Me.Hide()
+        InventarioCliente.LoadGridView()
     End Sub
 
     Private Sub ButtonBill_Click(sender As Object, e As EventArgs)

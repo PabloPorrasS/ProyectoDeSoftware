@@ -58,11 +58,13 @@ Public Class HomeCliente
 
     Private Sub ButtonMyInventory_Click_1(sender As Object, e As EventArgs) Handles ButtonMyInventory.Click
         InventarioCliente.Show()
+        InventarioCliente.LoadGridView()
 
     End Sub
 
     Private Sub ButtonOrders_Click(sender As Object, e As EventArgs) Handles ButtonOrders.Click
         PedidosCliente.Show()
+        PedidosCliente.LoadGridView()
     End Sub
 
 
@@ -78,6 +80,7 @@ Public Class HomeCliente
     Private Sub SplitContainer1_Panel2_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel2.Paint
 
         Dim welcomeName As String
+
 
         Dim Connection As New SqlConnection(ConnectionString)
 
@@ -113,5 +116,27 @@ Public Class HomeCliente
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Carrito.Show()
+        Carrito.LoadGridView()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Login.Show()
+        Login.TextBoxEmail.Text = ""
+        Login.TextBoxPassword.Text = ""
+        AgregarProductoBodega.Close()
+        Carrito.Close()
+        EditarCarrito.Close()
+        EditarPerfil.Close()
+        EditarProductoTienda.Close()
+        Facturas.Close()
+        FormularioDeRegistro.Close()
+        FormularioEditar.Close()
+        NuevoProductoCliente.Close()
+        Me.Close()
+
+    End Sub
+
+    Private Sub LabelWelcome_Click(sender As Object, e As EventArgs) Handles LabelWelcome.Click
+
     End Sub
 End Class
